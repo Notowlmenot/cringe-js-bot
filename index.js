@@ -31,8 +31,7 @@ if(message.content.startWith(p + 'hel')) {
     .setTitle("Аватар пользователя"+a)
     .setColor("#00BFFF")
     .setDescription('тестик')
-    .setFooter("request by"+a)
-if(!member) {
-member = message.author.id
+    .setFooter("request by"+a);
+}
 }
 robot.login(process.env.SECRET);
