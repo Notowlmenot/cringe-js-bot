@@ -29,6 +29,5 @@ robot.on('message', message => {
         const b = member.displayName
       'sometext' + b
     });
-}
 };
 robot.login(process.env.SECRET);
