@@ -30,5 +30,5 @@ robot.on('message', message => {
       'sometext' + b
     });
 }
-});
+};
 robot.login(process.env.SECRET);
