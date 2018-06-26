@@ -25,7 +25,7 @@ robot.on('message', message => {
     }
 });
 robot.on('message', message => {
-	if(message.content.startWith(p + 'web')) {
+	if(message.content.startsWith(p + 'web')) {
 		const hook = new Discord.WebhookClient('461098819585835009', 'tHAmrnW0DBLWdkpudsyV6t6ukn7mVXDXDj3Z98HuO9oSw6guD5PaHye3w1yrOvHgfXvx');
 		hook.send('hello bitches')
 	};
