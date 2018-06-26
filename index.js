@@ -25,7 +25,7 @@ robot.on('message', message => {
     }
 });
 robot.on('message', message => {
-    if(message.content.startWith(p + 'nick')) {
+    if(message.content.startsWith(p + 'nick')) {
         var b = member.displayName
       'sometext' + b
     };
