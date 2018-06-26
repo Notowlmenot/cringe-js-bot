@@ -32,11 +32,6 @@ robot.on('message', message => {
 		hook.send('hello bitches')
 	};
 });
-robot.on('message', message => {
-	if(message.content.startsWith(p + 'warn')) 
-		sendMessage 'kek'
-	};
-});
 function status1() {
     robot.user.setActivity('На говнокодера',{ type: "WATCHING" });
     robot.user.setStatus('online');
