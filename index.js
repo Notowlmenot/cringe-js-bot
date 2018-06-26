@@ -7,4 +7,4 @@ function status1() {
     robot.user.setActivity('На говнокодера',{ type: "WATCHING" })
     robot.user.setStatus('online')
 }
-client.login("process.env.BOT_TOKEN");
+robot.login(process.env.SECRET);
