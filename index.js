@@ -3,10 +3,6 @@ const request = require('request');
 const robot = new Discord.Client();
 var p = "!";
 
-function status1() {
-    robot.user.setActivity('На говнокодера',{ type: "WATCHING" });
-    robot.user.setStatus('online');
-}
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
         const embed = new Discord.RichEmbed()
@@ -37,4 +33,8 @@ robot.on('message', message => {
 		message.pin.j]
 	};
 });
+function status1() {
+    robot.user.setActivity('На говнокодера',{ type: "WATCHING" });
+    robot.user.setStatus('online');
+}
 robot.login(process.env.SECRET);
