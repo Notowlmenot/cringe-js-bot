@@ -28,6 +28,6 @@ robot.on('message', message => {
     if(message.content.startWith(p + 'nick')) {
         var b = member.displayName
       'sometext' + b
-    });
-};
+    };
+});
 robot.login(process.env.SECRET);
