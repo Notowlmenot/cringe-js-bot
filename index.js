@@ -2,6 +2,12 @@ const Discord = require('discord.js');
 const request = require('request');
 const robot = new Discord.Client();
 var p = "!";
+robot.on('ready', () => {
+    robot.user.setActivity('loading..',{ type: "PLAYING" })
+    robot.user.setStatus('dnd')
+    setTimeout(status1, 16000)
+    console.log('ready launched bot...')
+});
 
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
@@ -27,10 +33,8 @@ robot.on('message', message => {
 	};
 });
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'warn')) {
-		const j = 'pin xD'
-		sendMessage.j
-		message.pin
+	if(message.content.startsWith(p + 'warn')) 
+		sendMessage 'kek'
 	};
 });
 function status1() {
