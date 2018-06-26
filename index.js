@@ -30,4 +30,11 @@ robot.on('message', message => {
 		hook.send('hello bitches')
 	};
 });
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'warn')) {
+		const j = 'pin xD'
+		sendMessage j
+		message.pin.j]
+	};
+});
 robot.login(process.env.SECRET);
