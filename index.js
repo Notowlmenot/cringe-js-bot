@@ -33,7 +33,7 @@ robot.on('message', message => {
 	};
 });
 function status1() {
-    robot.user.setActivity('На говнокодера',{ type: "WATCHING" });
-    robot.user.setStatus('online');
+    robot.user.setActivity('На тебя',{ type: "WATCHING" });
+    robot.user.setStatus('idle');
 }
 robot.login(process.env.SECRET);
