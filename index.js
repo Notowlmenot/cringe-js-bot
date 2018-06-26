@@ -24,4 +24,15 @@ robot.on('message', message => {
         });
     }
 });
+robot.on('message', message => {
+if(message.content.startWith(p + 'hel')) {
+    const embed = nes Discord.RichEmbed()
+    var a = (message.author)
+    .setTitle("Аватар пользователя"+a)
+    .setColor("#00BFFF")
+    .setDescription('тестик')
+    .setFooter("request by"+a)
+if(!member) {
+member = message.author.id
+}
 robot.login(process.env.SECRET);
