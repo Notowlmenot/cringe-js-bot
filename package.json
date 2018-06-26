@@ -2,7 +2,7 @@
   "name": "dorjsbot",
   "version": "1.0.0",
   "description": "test",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
   },
   "author": "",
