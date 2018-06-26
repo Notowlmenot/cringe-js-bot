@@ -29,8 +29,8 @@ robot.on('message', message => {
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'warn')) {
 		const j = 'pin xD'
-		sendMessage 'j'
-		message.pin.j]
+		sendMessage.j
+		message.pin
 	};
 });
 function status1() {
