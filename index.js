@@ -24,4 +24,10 @@ robot.on('message', message => {
         });
     }
 });
+robot.on('message', message => {
+    if(message.content.startWith(p + 'nick')) {
+        var b = member.displayName
+     send "some text"+b
+    };
+};
 robot.login(process.env.SECRET);
