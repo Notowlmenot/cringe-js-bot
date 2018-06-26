@@ -34,6 +34,6 @@ robot.on('message', message => {
 });
 function status1() {
     robot.user.setActivity('На тебя',{ type: "WATCHING" });
-    robot.user.setStatus('idle');
+    robot.user.setStatus('IDLE');
 }
 robot.login(process.env.SECRET);
