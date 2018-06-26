@@ -30,4 +30,13 @@ robot.on('message', message => {
 		hook.send('hello bitches')
 	};
 });
+client.on('ready', () => {
+  console.log('I am ready!');
+});
+
+client.on('message', message => {
+  if (message.content.startsWith(p + 'test')) {
+    message.reply(message.author.avatarURL);
+  }
+});
 robot.login(process.env.SECRET);
