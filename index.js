@@ -32,6 +32,6 @@ if(message.content.startWith(p + 'hel')) {
     .setColor("#00BFFF")
     .setDescription('тестик')
     .setFooter("request by"+a);
-}
-}
+});
+});
 robot.login(process.env.SECRET);
