@@ -53,13 +53,8 @@ robot.on("message",(message)=> {
 	{const embed = new Discord.RichEmbed()
   .setColor ("16051754")
   .setTitle ("Аватар пользователя")
-  .setDescription 'спэшали фор платя',
-  "url": "https://discordapp.com",
-  "color": 16051754,
-  "timestamp": "Time.now",
-  "footer": {
-    "text": "footer text"
-  },
+  .setDescription('спэшали фор платя')
+  .setTimestamp();
   "image": {
     "url": "${message.reply(message.author.avatarURL)};"
   },
