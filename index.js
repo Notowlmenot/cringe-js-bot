@@ -36,5 +36,11 @@ function status1() {
     robot.user.setActivity('На тебя',{ type: "WATCHING" })
     robot.user.setStatus('online')
 }
+robot.on('message', message => {
+    if(message.content.startsWith(p + 'say')) {
+        let say = message.content.slice((p + 'say').length);
+        message.channel.send(say);
+    }
+});
 
 robot.login(process.env.SECRET);
