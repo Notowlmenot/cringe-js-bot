@@ -34,5 +34,5 @@ robot.on('message', message => {
 });
     robot.user.setActivity('На своего кодера',{ type: "WATCHING" });
     robot.user.setStatus('IDLE');
-};
+}
 robot.login(process.env.SECRET);
