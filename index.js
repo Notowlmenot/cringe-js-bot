@@ -43,8 +43,7 @@ const command = args.shift().toLowerCase();
     }
 
     message.channel.send(`Command name: ${command}\nArguments: ${args}`);
-}
-});
+};
 	
     robot.user.setActivity('На тебя',{ type: "WATCHING" });
     robot.user.setStatus('IDLE');
