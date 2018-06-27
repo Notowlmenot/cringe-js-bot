@@ -32,7 +32,6 @@ robot.on('message', message => {
 		hook.send('hello bitches')
 	};
 });
-Конец
 function status1() {
     robot.user.setActivity('На тебя',{ type: "WATCHING" })
     robot.user.setStatus('online')
