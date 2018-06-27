@@ -32,11 +32,10 @@ robot.on('message', message => {
 		hook.send('hello bitches')
 	};
 });
-robot.on('ready', () => {
-    robot.user.setActivity('на тебя',{ type: "WATCHING" })
+Конец
+function status1() {
+    robot.user.setActivity('На тебя',{ type: "WATCHING" })
     robot.user.setStatus('online')
-    setTimeout(status1, 16000)
-    console.log('Смотрю')
-});
+}
 
 robot.login(process.env.SECRET);
