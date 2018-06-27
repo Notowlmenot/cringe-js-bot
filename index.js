@@ -38,4 +38,5 @@ robot.on('ready', () => {
     setTimeout(status1, 16000)
     console.log('Смотрю')
 });
+
 robot.login(process.env.SECRET);
