@@ -41,7 +41,7 @@ robot.on('message', message => {
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
     }
-});
+})
 
 robot.on('message', message => {
 	if(message.content.start('@everyone')) {
