@@ -33,7 +33,7 @@ robot.on('message', message => {
 	};
 });
     robot.user.setActivity('На своего кодера',{ type: "WATCHING" });
-    robot.user.setStatus('IDLE');
+    robot.user.setStatus('dnd');
 
 robot.login(process.env.SECRET);
 textchannel.send('Кто меня разбудил, вашу мать?')
