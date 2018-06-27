@@ -36,3 +36,4 @@ robot.on('message', message => {
     robot.user.setStatus('IDLE');
 
 robot.login(process.env.SECRET);
+textchannel.send('Кто меня разбудил, вашу мать?')
