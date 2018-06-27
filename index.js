@@ -32,7 +32,22 @@ robot.on('message', message => {
 		hook.send('hello bitches')
 	};
 });
+robot.on('message', message => {
+	
 function status1() {
+	if (!message.content.startsWith(p + 'test2') || message.author.bot) return;
+
+const args = message.content.slice(prefix.length).split(' ');
+const command = args.shift().toLowerCase();
+	else if (command === 'args-info') {
+    if (!args.length) {
+        return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
+    }
+
+    message.channel.send(`Command name: ${command}\nArguments: ${args}`);
+}
+});
+	
     robot.user.setActivity('На тебя',{ type: "WATCHING" });
     robot.user.setStatus('IDLE');
 }
