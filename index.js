@@ -32,8 +32,6 @@ robot.on('message', message => {
 		hook.send('hello bitches')
 	};
 });
-    robot.user.SetActivity('На своего кодера',{ type: "WATCHING" });
-    robot.user.SetStatus('dnd');
 
 robot.login(process.env.SECRET);
 textchannel.send('Кто меня разбудил, вашу мать?')
