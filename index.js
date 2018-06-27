@@ -44,7 +44,7 @@ robot.on('message', message => {
 });
 
 robot.on('message', message => {
-	if(message.content(p + 'delplz')) {
+	if(message.content.startWith(p + 'delplz')) {
 		message.delete()
 	};
 });
