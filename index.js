@@ -48,5 +48,31 @@ robot.on('message', message => {
 		message.delete()
 	};
 });
-		
+robot.on("message",(message)=> {
+	if(message.contentstartWith(p + 'avatar')
+	const avataruserid =  message.reply(message.author.avatarURL);
+const embed = {
+  "title": "title ~~(did you know you can have markdown here too?)~~",
+  "description": "this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```",
+  "url": "https://discordapp.com",
+  "color": 16051754,
+  "timestamp": "2018-06-27T07:52:46.926Z",
+  "footer": {
+    "text": "footer text"
+  },
+  "thumbnail": {
+    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+  },
+  "image": {
+    "url": "${message.reply(message.author.avatarURL)};"
+  },
+    "url": "https://discordapp.com",
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+  }
+    }
+  ]
+};
+ }
+ });
+
 robot.login(process.env.SECRET);
