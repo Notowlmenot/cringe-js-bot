@@ -34,4 +34,3 @@ robot.on('message', message => {
 });
 
 robot.login(process.env.SECRET);
-textchannel.send('Кто меня разбудил, вашу мать?')
