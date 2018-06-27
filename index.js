@@ -44,7 +44,7 @@ robot.on('message', message => {
 });
 
 robot.on('message', message => {
-	if(message.content.start('@everyone')) {
+	if(message.content == ('@everyone')) {
 		message.delete()
 	};
 });
