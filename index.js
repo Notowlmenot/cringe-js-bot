@@ -40,12 +40,13 @@ robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
-    }
-})
+    };
+});
 
 robot.on('message', message => {
 	if(message.content.start('@everyone')) {
 		message.delete()
 	};
+});
 		
 robot.login(process.env.SECRET);
