@@ -32,8 +32,7 @@ robot.on('message', message => {
 		hook.send('hello bitches')
 	};
 });
-	
-    robot.user.setActivity('На тебя',{ type: "WATCHING" });
+    robot.user.setActivity('На своего кодера',{ type: "WATCHING" });
     robot.user.setStatus('IDLE');
 };
 robot.login(process.env.SECRET);
