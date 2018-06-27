@@ -5,7 +5,7 @@ var p = "!";
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
-    setTimeout(status1, 16000)
+    setTimeout(status 1, 16000)
     console.log('ready launched bot...')
 });
 
@@ -35,7 +35,7 @@ robot.on('message', message => {
 robot.on('ready', () => {
     robot.user.setActivity('на тебя',{ type: "WATCHING" })
     robot.user.setStatus('online')
-    setTimeout(status1, 16000)
+    setTimeout(status 1, 16000)
     console.log('Смотрю')
 });
 robot.login(process.env.SECRET);
