@@ -49,25 +49,20 @@ robot.on('message', message => {
 	};
 });
 robot.on("message",(message)=> {
-	if(message.contentstartWith(p + 'avatar')
-const embed = {
-  "title": "Аватар пользователя",
-  "description": "спэшали фор платя",
+	if(message.content.startWith(p + 'avatar')
+const embed = new Discord.RichEmbed()
+  .setColor ("16051754")
+  .setTitle ("Аватар пользователя")
+  .setDescription "спэшали фор платя",
   "url": "https://discordapp.com",
   "color": 16051754,
   "timestamp": "Time.now",
   "footer": {
     "text": "footer text"
   },
-  "thumbnail": {
-    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
-  },
   "image": {
     "url": "${message.reply(message.author.avatarURL)};"
   },
-    "url": "https://discordapp.com",
-    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
-  }
     }
   ]
 };
