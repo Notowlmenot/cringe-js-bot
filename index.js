@@ -50,7 +50,6 @@ robot.on('message', message => {
 });
 robot.on("message",(message)=> {
 	if(message.contentstartWith(p + 'avatar')
-	let avataruserid =  message.reply(message.author.avatarURL);
 const embed = {
   "title": "Аватар пользователя",
   "description": "спэшали фор платя",
