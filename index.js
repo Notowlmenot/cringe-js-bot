@@ -53,7 +53,7 @@ robot.on("message",(message)=> {
 	{const embed = new Discord.RichEmbed()
   .setColor ("16051754")
   .setTitle ("Аватар пользователя")
-  .setDescription "спэшали фор платя",
+  .setDescription 'спэшали фор платя',
   "url": "https://discordapp.com",
   "color": 16051754,
   "timestamp": "Time.now",
