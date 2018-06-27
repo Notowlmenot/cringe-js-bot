@@ -55,7 +55,7 @@ robot.on("message",(message)=> {
   .setTitle ("Аватар пользователя")
   .setDescription('спэшали фор платя')
   .setTimestamp();
-  .setImage:(${message.reply(message.author.avatarURL)});
+  .setImage:(message.reply(message.author.avatarURL));
   },
     }
   ]
