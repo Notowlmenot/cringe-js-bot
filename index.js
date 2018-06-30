@@ -56,9 +56,6 @@ robot.on('message', message => {
             .setDescription('Вош(о)л(а) в AFK,не мешайте.')
             .setFooter("AFK|HEE4")
             .setTimestamp();
-            message.reply({embed}).then(sentMessage => {
-                sentMessage.react('🔜')    
-                    .catch(() => console.error('One of the emojis failed to react1.'));
             });
             }
 });
