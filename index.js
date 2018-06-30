@@ -57,7 +57,7 @@ robot.on('message', message => {
             .setFooter("AFK|HEE4")
             .setTimestamp();
             };
-            })
+            });
 }
 
 robot.login(process.env.SECRET);
