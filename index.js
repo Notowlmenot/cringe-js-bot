@@ -58,6 +58,6 @@ robot.on('message', message => {
             .setTimestamp();
             };
             })
-});
+};
 
 robot.login(process.env.SECRET);
