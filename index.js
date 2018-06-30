@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const request = require('request');
 const robot = new Discord.Client();
-var p = "!";
+var p = "d2!";
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
@@ -58,6 +58,6 @@ robot.on('message', message => {
             .setTimestamp();
             });
             }
-});
+};
 
 robot.login(process.env.SECRET);
