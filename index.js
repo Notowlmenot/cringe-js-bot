@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const request = require('request');
 const robot = new Discord.Client();
-var p = "d2!";
+var p = "!";
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
@@ -49,7 +49,7 @@ robot.on('message', message => {
 	};
 });
 robot.on('message', message => {
-    if(message.content.startsWith(p + 'afk on')) {
+    if(message.content.startsWith(p + 'afk')) {
         const embed = new Discord.RichEmbed()
             .setTitle("AFK")
             .setColor("#00BFFF")
