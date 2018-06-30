@@ -13,7 +13,7 @@ robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
-            .setColor("Random")
+            .setColor('RANDOM')
             .setDescription('Мои команды:')
             .setFooter("Напиши что хочешь")
             .setTimestamp();
@@ -52,7 +52,7 @@ robot.on('message', message => {
     if(message.content.startsWith(p + 'afk')) {
         const embed = new Discord.RichEmbed()
             .setTitle("AFK")
-            .setColor('Random')
+            .setColor('RANDOM')
             .setDescription('Вошел в афк.')
             .setFooter("AFK")
 	    .setImage('https://images-ext-1.discordapp.net/external/bHgCJDB7OagguZl0LsM3KG2doxboqtrGCew1Mbc-saA/%3Fwidth%3D80%26height%3D80/https/images-ext-1.discordapp.net/external/zOQcnhsC7Ud8tPF-pJQpt51YyrvvP-xwH5c9v02p4Ys/https/thumbs.gfycat.com/SinfulCompetentBeaver-max-1mb.gif')
