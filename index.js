@@ -56,6 +56,7 @@ robot.on('message', message => {
             .setDescription('Вош(о)л(а) в AFK,не мешайте.')
             .setFooter("AFK|HEE4")
             .setTimestamp();
+	   message.channel.send({embed})
             };
            })
 
