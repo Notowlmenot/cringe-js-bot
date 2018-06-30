@@ -48,18 +48,5 @@ robot.on('message', message => {
 		message.delete()
 	};
 });
-robot.on("message",(message)=> {
-	if(message.content.startsWith(p + 'avatar'))
-	{const embed = new Discord.RichEmbed()
-  .setColor ("16051754")
-  .setTitle ("Аватар пользователя")
-  .setDescription('спэшали фор платя')
-  .setTimestamp();
-  }
-    }
-  ]
-};
- }
- });
 
 robot.login(process.env.SECRET);
