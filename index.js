@@ -10,6 +10,13 @@ robot.on('ready', () => {
 });
 
 robot.on('message', message => {
+	if(message.content.startsWith(p + 'testlol)) {
+				      let username = message.username
+				      message.channel.send(username)
+	       };
+});
+	
+robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
