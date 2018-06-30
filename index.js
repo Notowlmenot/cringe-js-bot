@@ -12,7 +12,7 @@ robot.on('ready', () => {
 robot.on('message', message => {
     if(message.content.startsWith(p + 'lol')) {
 const user = user.displayName
-message.channel.send(b)
+message.channel.send(user)
     };
 });
 	
