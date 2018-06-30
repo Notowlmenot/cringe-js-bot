@@ -53,8 +53,9 @@ robot.on('message', message => {
         const embed = new Discord.RichEmbed()
             .setTitle("AFK")
             .setColor("#00BFFF")
-            .setDescription('Вош(о)л(а) в AFK,не мешайте.')
+            .setDescription('Вошел в афк.')
             .setFooter("AFK|HEE4")
+	    .setImage('https://images-ext-1.discordapp.net/external/bHgCJDB7OagguZl0LsM3KG2doxboqtrGCew1Mbc-saA/%3Fwidth%3D80%26height%3D80/https/images-ext-1.discordapp.net/external/zOQcnhsC7Ud8tPF-pJQpt51YyrvvP-xwH5c9v02p4Ys/https/thumbs.gfycat.com/SinfulCompetentBeaver-max-1mb.gif')
             .setTimestamp();
 	   message.channel.send({embed})
             };
