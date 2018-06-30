@@ -10,10 +10,10 @@ robot.on('ready', () => {
 });
 
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'testlol)) {
-				      let username = message.username
-				      message.channel.send(username)
-	       };
+    if(message.content.startsWith(p + 'lol')) {
+        let username = message.username((p + 'lol');
+        message.channel.send(username);
+    };
 });
 	
 robot.on('message', message => {
