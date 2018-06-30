@@ -54,7 +54,7 @@ robot.on('message', message => {
             .setTitle("AFK")
             .setColor("#00BFFF")
             .setDescription('Вошел в афк.')
-            .setFooter("AFK|HEE4")
+            .setFooter("AFK")
 	    .setImage('https://images-ext-1.discordapp.net/external/bHgCJDB7OagguZl0LsM3KG2doxboqtrGCew1Mbc-saA/%3Fwidth%3D80%26height%3D80/https/images-ext-1.discordapp.net/external/zOQcnhsC7Ud8tPF-pJQpt51YyrvvP-xwH5c9v02p4Ys/https/thumbs.gfycat.com/SinfulCompetentBeaver-max-1mb.gif')
             .setTimestamp();
 	   message.channel.send({embed})
