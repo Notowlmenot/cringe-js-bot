@@ -48,7 +48,7 @@ robot.on('message', message => {
 	    var hah = "kek"
 	    var sap = "azaz"
 	    message.channel.send(sap)
-	    message.channel.edit(hah)
+	    message.edit(hah)
 	     message.react('🤔')
     };
 });
