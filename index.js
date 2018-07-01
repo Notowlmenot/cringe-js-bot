@@ -45,7 +45,7 @@ function status1() {
 }
 robot.on('message', message => {
     if(message.content.startsWith(p + 'edit')) {
-	    message.channel.send "say";
+	    message.channel.send "say"
 	    message.channel.edit "edited"
     };
 });
