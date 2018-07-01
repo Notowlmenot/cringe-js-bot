@@ -44,9 +44,9 @@ function status1() {
     robot.user.setStatus('online')
 }
 robot.on('message', message => {
-    if(message.content.startsWith(p + 'say')) {
-	    message.channel.send(say);
-	    message.channel.edit(edited)
+    if(message.content.startsWith(p + 'edit')) {
+	    message.channel.send "say";
+	    message.channel.edit "edited"
     };
 });
 
