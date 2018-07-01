@@ -53,9 +53,14 @@ robot.on('message', message => {
 });
 
 robot.on('message', message => {
-    if(message.content.startsWith(p + 'say')) {
-		let say = message.content.slice((p + 'say').length);
-        message.channel.send(say);
+    if(message.content.startsWith(p + 'mute')) {
+	    message.mentions.member.removeRole('462657844538376212')
+    };
+});
+
+robot.on('message', message => {
+    if(message.content.startsWith(p + 'unmute')) {
+	    message.mentions.member.addRole('462657844538376212')
     };
 });
 
@@ -64,6 +69,7 @@ robot.on('message', message => {
 		message.delete()
 	};
 });
+	    
 robot.on('message', message => {
     if(message.content.startsWith(p + 'afk')) {
         const embed = new Discord.RichEmbed()
