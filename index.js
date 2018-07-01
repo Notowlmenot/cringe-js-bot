@@ -45,11 +45,11 @@ function status1() {
 }
 robot.on('message', message => {
     if(message.content.startsWith(p + 'edit')) {
-	    var edited = "edited)"
+	    var hah = "kek"
 	    var sap = "azaz"
 	    message.channel.send(sap)
-	    message.react('🇭')
-	    message.channel.edit(edited)
+	    message.react('🤔')
+	    message.channel.edit(hah)
     };
 });
 
