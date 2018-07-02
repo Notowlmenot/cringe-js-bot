@@ -88,11 +88,11 @@ robot.on('message', message => {
         message.channel.send(say);
     }
 });
-var messagelol = 'lol'
+var messagelol = 'Я работаю!'
 robot.on('message', message => {
     if(message.content.startsWith(p + 'check')) {
 	    message.channel.send(messagelol);
-	    message.react('407618759637860352')
+	    message.react('380571016994226186')
     }
 })
 
