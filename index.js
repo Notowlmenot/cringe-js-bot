@@ -22,7 +22,7 @@ robot.on('message', message => {
             .setColor('RANDOM')
             .setDescription('Префикс бота - !')
 	.setField('help')
-	.setValue:('Показать этот список')
+	.setValue('Показать этот список')
             .setFooter("Напиши что хочешь")
             .setTimestamp();
         message.channel.send({embed})
