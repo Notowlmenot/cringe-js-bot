@@ -95,11 +95,9 @@ robot.on('message', message => {
     }
 });
 robot.on('message', message => {
-	var useridkek = message.author.avatar_url
 	if(message.content.startsWith(p + 'logo')) {
 		const embed = new Discord.RichEmbed()
-		.setTitle(useridkek)
-		.setDescription('Логотип сервера:')
+		.setTitle(Логотип сервера)
             .setColor('RANDOM')
 		.setImage(message.guild.iconURL)
 		 message.channel.send({embed})
