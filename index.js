@@ -94,24 +94,6 @@ robot.on('message', message => {
 		.setImage(message.author.avatarURL)
 		 message.channel.send({embed})
 	}
-});
-robot.on('message', message => {
-	if(message.content.startsWith(p + 'avatar')) {
-    message.delete();
-    const color = parseInt(func.getRandomInt(0, 16777214));
-    const apiping = Math.round(client.ping);
-    const embed = new Discord.RichEmbed()
-        .setTitle('ping')
-        .setDescription(`\n['main_server']: **('calculation')...**\n ('api_server'): **${apiping}**['ms']`)
-        .setFooter['only_bots']
-        .setColor('RANDOM');
-    message.channel.send({embed}).then(m => {
-        const embed_req = new Discord.RichEmbed()
-            .setTitle('ping')
-            .setDescription(`\n('main_server'): **${m.createdTimestamp - message.createdTimestamp}**('ms')\n {'api_server'}: **${apiping}**['ms']`)
-            .setFooter('only_bots')
-            .setColor('RANDOM');
-        m.edit({embed: embed_req});
-    })
+})
 
 robot.login(process.env.SECRET);
