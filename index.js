@@ -101,7 +101,7 @@ robot.on('message', message => {
 		.setTitle("Логотип сервера:")
             .setColor('RANDOM')
             .setDescription('Логотип:')
-		.setImage($message.guild.iconURL)
+		.setImage(message.guild.iconURL)
 	}
 })
 
