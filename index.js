@@ -92,7 +92,7 @@ var messagelol = 'lol'
 robot.on('message', message => {
     if(message.content.startsWith(p + 'check')) {
 	    message.channel.send(messagelol);
-	    sendMessage.react('380571016994226186')
+	    message.react('380571016994226186')
     }
 })
 
