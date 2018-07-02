@@ -94,6 +94,13 @@ robot.on('message', message => {
 		.setImage(message.author.avatarURL)
 		 message.channel.send({embed})
 	}
+});
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'kick')) {
+		var ygy = "Успешно"
+	message.mention.member.kick()
+		message.react('380571016994226186')
+		message.channel.send('ygy')
+	}
 })
-
 robot.login(process.env.SECRET);
