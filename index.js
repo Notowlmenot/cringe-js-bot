@@ -8,12 +8,6 @@ robot.on('ready', () => {
     setTimeout(status1, 16000)
     console.log('ready launched bot...')
 });
-
-robot.on('message', message => {
-    if(message.content.startsWith(p + 'avatar')) {
-	    message.reply(message.author.avatarURL)
-    };
-});
 	
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
