@@ -22,15 +22,10 @@ robot.on('message', message => {
             .setColor('RANDOM')
             .setDescription('Префикс бота - !')
 	.setField('help')
-	.setValue: "Показать этот список"
+	.setValue:('Показать этот список')
             .setFooter("Напиши что хочешь")
             .setTimestamp();
-        message.channel.send({embed}).then(sentMessage => {   
-            sendMessage.react('🇭')
-                .then(() => sentMessage.react('🇪'))
-                    .then(() => sentMessage.react('🇱'))
-                    .then(() => sentMessage.react('🇵'))
-                    .catch(() => console.error('One of the emojis failed to react.'));
+        message.channel.send({embed})
         });
     }
 });
