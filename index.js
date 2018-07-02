@@ -96,6 +96,15 @@ robot.on('message', message => {
 		.setImage(message.guild.iconURL)
 		 message.channel.send({embed})
 	}
+});
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'avatar')) {
+		const embed = new Discord.RichEmbed()
+		.setTitle('Аватар пользователя:')
+            .setColor('RANDOM')
+		.setImage(message.author.avatarURL)
+		 message.channel.send({embed})
+	}
 })
 
 robot.login(process.env.SECRET);
