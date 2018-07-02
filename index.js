@@ -11,7 +11,7 @@ robot.on('ready', () => {
 
 robot.on('message', message => {
     if(message.content.startsWith(p + 'avatar')) {
-	    message.reply(message.user.avatar)
+	    message.reply(message.author.avatar_url)
     };
 });
 	
