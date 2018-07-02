@@ -100,7 +100,6 @@ robot.on('message', message => {
 		const embed = new Discord.RichEmbed()
 		.setTitle("Логотип сервера:")
             .setColor('RANDOM')
-            .setDescription('Логотип:')
 		.setImage(message.guild.iconURL)
 		 message.channel.send({embed})
 	}
