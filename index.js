@@ -11,7 +11,7 @@ robot.on('ready', () => {
 
 robot.on('message', message => {
     if(message.content.startsWith(p + 'avatar')) {
-	    message.reply(message.author.avatar_url)
+	    message.reply(message.author.avatarURL)
     };
 });
 	
@@ -26,7 +26,7 @@ robot.on('message', message => {
             .setFooter("Напиши что хочешь")
             .setTimestamp();
         message.channel.send({embed})
-        });
+        };
     }
 });
 robot.on('message', message => {
