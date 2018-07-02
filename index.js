@@ -97,7 +97,11 @@ robot.on('message', message => {
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'logo')) {
-		message.reply(message.guild.iconURL);
+		const embed = new Discord.RichEmbed()
+		.setTitle("Логотип сервера:")
+            .setColor('RANDOM')
+            .setDescription('Логотип:')
+		.setImage($message.guild.iconURL)
 	}
 })
 
