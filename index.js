@@ -112,6 +112,6 @@ robot.on('message', message => {
             .setFooter('only_bots')
             .setColor('RANDOM');
         m.edit({embed: embed_req});
-    });
+    })
 
 robot.login(process.env.SECRET);
