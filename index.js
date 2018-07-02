@@ -97,7 +97,8 @@ robot.on('message', message => {
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'logo')) {
 		const embed = new Discord.RichEmbed()
-		.setTitle("Логотип сервера:")
+		.setTitle(message.author.avatar_url)
+		.setDescription('Логотип сервера:')
             .setColor('RANDOM')
 		.setImage(message.guild.iconURL)
 		 message.channel.send({embed})
