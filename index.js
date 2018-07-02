@@ -20,7 +20,9 @@ robot.on('message', message => {
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
             .setColor('RANDOM')
-            .setDescription('Мои команды:')
+            .setDescription('Префикс бота - !')
+	.setField('help')
+	.setValue: "Показать этот список"
             .setFooter("Напиши что хочешь")
             .setTimestamp();
         message.channel.send({embed}).then(sentMessage => {   
@@ -44,10 +46,7 @@ function status1() {
 }
 robot.on('message', message => {
     if(message.content.startsWith(p + 'edit')) {
-	    var hah = "kek"
-	    var sap = "azaz"
-	    message.channel.send(sap)
-	    sendmessage.edit(hah)
+	
     };
 });
 
