@@ -95,6 +95,8 @@ robot.on('message', message => {
 		 message.channel.send({embed})
 	}
 });
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'avatar')) {
     message.delete();
     const color = parseInt(func.getRandomInt(0, 16777214));
     const apiping = Math.round(client.ping);
