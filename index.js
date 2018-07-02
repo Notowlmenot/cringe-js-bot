@@ -94,6 +94,11 @@ robot.on('message', message => {
 	    message.channel.send(messagelol);
 	    message.react('380571016994226186')
     }
+});
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'logo')) {
+		message.reply(server.icon_url);
+	}
 })
 
 robot.login(process.env.SECRET);
