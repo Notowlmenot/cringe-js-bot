@@ -27,7 +27,7 @@ robot.on('message', message => {
             .setTimestamp();
         message.channel.send({embed})
         };
-    }
+    };
 });
 robot.on('message', message => {
 	if(message.content == (p + 'web')) {
