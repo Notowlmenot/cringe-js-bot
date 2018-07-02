@@ -10,9 +10,8 @@ robot.on('ready', () => {
 });
 
 robot.on('message', message => {
-    if(message.content.startsWith(p + 'lol')) {
-const user = user.displayName
-message.channel.send(user)
+    if(message.content.startsWith(p + 'avatar')) {
+	    message.reply(message.user.avatar)
     };
 });
 	
