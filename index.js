@@ -102,6 +102,7 @@ robot.on('message', message => {
             .setColor('RANDOM')
             .setDescription('Логотип:')
 		.setImage(message.guild.iconURL)
+		 message.channel.send({embed})
 	}
 })
 
