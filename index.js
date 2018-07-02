@@ -97,7 +97,7 @@ robot.on('message', message => {
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'logo')) {
-		message.reply(server.icon_url);
+		message.reply(guild.icon_url);
 	}
 })
 
