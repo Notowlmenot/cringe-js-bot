@@ -100,10 +100,10 @@ robot.on('message', message => {
 robot.on('message', message => {
   if (message.content === 'ping') {
     // Send "pong" to the same channel
-	 var pingsmessage = message.Number.ping
+     var pingsmessage = robot.ping
     var m = message.channel.send('pong!')
     message.channel.send(m)
-	  m.edit('pong!' + pingsmessage)
+      m.edit('pong!' + pingsmessage)
   }
 })
 
