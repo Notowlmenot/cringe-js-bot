@@ -15,20 +15,13 @@ robot.on('message', message => {
             .setTitle("Помощь")
             .setColor('RANDOM')
             .setDescription('Префикс бота - !')
-	.setField('help')
-	.setValue('Показать этот список')
+	.setField('help'), value:('Показать список доступных команд)
             .setFooter("Напиши что хочешь")
             .setTimestamp();
         message.channel.send({embed})
         };
 });
 
-robot.on('message', message => {
-	if(message.content == (p + 'web')) {
-		const hook = new Discord.WebhookClient('461098819585835009', 'tHAmrnW0DBLWdkpudsyV6t6ukn7mVXDXDj3Z98HuO9oSw6guD5PaHye3w1yrOvHgfXvx');
-		hook.send('hello bitches')
-	};
-});
 function status1() {
     robot.user.setActivity('На тебя',{ type: "WATCHING" })
     robot.user.setStatus('online')
