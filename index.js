@@ -101,7 +101,6 @@ robot.on('message', message => {
 ('message', message => {
   if (message.content === 'ping') {
      const pingsmessage = robot.ping
-    var m = message.channel.send('pong!')
     message.channel.send('pong!' + pingsmessage)
   }
 })
