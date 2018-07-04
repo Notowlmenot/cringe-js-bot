@@ -102,6 +102,6 @@ robot.on('message', message => {
 message.channel.send('Pinging...').then(sent => {
     sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
 	})
-})
+}
 
 robot.login(process.env.SECRET);
