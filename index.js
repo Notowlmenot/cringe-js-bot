@@ -10,7 +10,7 @@ robot.on('ready', () => {
 });
 	
 robot.on('message', message => {
-    if(message.content.startsWith(p + 'help')) {
+    if(message.content.startWith(p + 'help')) {
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
             .setColor('RANDOM')
@@ -28,7 +28,7 @@ function status1() {
 }
 
 robot.on('message', message => {
-    if(message.content.startsWith(p + 'mute')) {
+    if(message.content.startWith(p + 'mute')) {
 	    message.mentions.member.removeRole('462657844538376212')
     };
 });
@@ -65,13 +65,13 @@ robot.on('message', message => {
 });
 var messagelol = 'Я работаю!'
 robot.on('message', message => {
-    if(message.content.startsWith(p + 'check')) {
+    if(message.content === (p + 'check')) {
 	    message.channel.send(messagelol);
 	    message.react('380571016994226186')
     }
 });
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'logo')) {
+	if(message.content === (p + 'logo')) {
 		const embed = new Discord.RichEmbed()
 		.setTitle('Логотип сервера')
             .setColor('RANDOM')
@@ -80,7 +80,7 @@ robot.on('message', message => {
 	}
 });
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'avatar')) {
+	if(message.content === (p + 'avatar')) {
 		const embed = new Discord.RichEmbed()
 		.setTitle('Аватар пользователя:')
             .setColor('RANDOM')
