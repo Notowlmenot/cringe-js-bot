@@ -99,7 +99,7 @@ robot.on('message', message => {
 });
 robot.on('message', message => {
 ('message', message => {
-  if (message.content === 'ping') {
+  if (message.content === (p + 'ping')) {
 message.channel.send('Pinging...').then(sent => {
     sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
 });
