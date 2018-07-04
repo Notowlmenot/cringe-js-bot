@@ -15,7 +15,7 @@ robot.on('message', message => {
             .setTitle("Помощь")
             .setColor('RANDOM')
             .setDescription('Префикс бота - !')
-	.setField('help'), value:('Показать список доступных команд)
+	.setField('help')
             .setFooter("Напиши что хочешь")
             .setTimestamp();
         message.channel.send({embed})
