@@ -100,7 +100,14 @@ robot.on('message', message => {
 robot.on('message', message => {
   if (message.content === (p + 'ping')) {
 message.channel.send('Pinging...').then(sent => {
-    sent.edit(`Pong! пинг бота: ${sent.createdTimestamp - message.createdTimestamp}ms`);
+    sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
+    });
+  }
+});
+robot.on('message', message => {
+  if (message.content === (p + 'пинг')) {
+message.channel.send('Pinging...').then(sent => {
+    sent.edit(`Понг! пинг бота: ${sent.createdTimestamp - message.createdTimestamp}мс`);
     });
   }
 })
