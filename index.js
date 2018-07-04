@@ -28,7 +28,7 @@ function status1() {
 }
 
 robot.on('message', message => {
-    if(message.content.startWith(p + 'mute')) {
+    if(message.content.startsWith(p + 'mute')) {
 	    message.mentions.member.removeRole('462657844538376212')
     };
 });
