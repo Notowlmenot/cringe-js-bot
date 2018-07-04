@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const request = require('request');
 const robot = new Discord.Client();
-var p = (!);
+var p = ('!');
     }
 });
 robot.on('ready', () => {
