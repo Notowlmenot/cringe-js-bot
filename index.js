@@ -91,7 +91,7 @@ robot.on('message', message => {
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'kick')) {
 		var ygy = "Успешно"
-	var kicklul = message.mentions.members
+	const kicklul = message.mentions.members
 	member.kick(kicklul)
 		message.react('380571016994226186')
 		message.channel.send('ygy')
