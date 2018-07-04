@@ -103,5 +103,15 @@ robot.on('message', message => {
 		message.react('380571016994226186')
 		message.channel.send('ygy')
 	}
+});
+client.on('message', message => {
+  if (message.content === 'ping') {
+    // Send "pong" to the same channel
+	 var pingsmessage = message.Number.pings
+    var m = message.channel.send('pong!')
+    message.channel.send(m)
+	  m.edit('pong!' + pingsmessage)
+  }
 })
+
 robot.login(process.env.SECRET);
