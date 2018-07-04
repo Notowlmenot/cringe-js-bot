@@ -1,7 +1,12 @@
 const Discord = require('discord.js');
 const request = require('request');
 const robot = new Discord.Client();
-var p = "d!";
+robot.on('message', message => {
+    if(message.content.startsWith(p + 'prefix')) {
+        let pref = message.content.slice((p + 'prefix').length);
+	    var p = (pref);
+    }
+});
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
