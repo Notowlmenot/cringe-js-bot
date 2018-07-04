@@ -2,8 +2,6 @@ const Discord = require('discord.js');
 const request = require('request');
 const robot = new Discord.Client();
 var p = ('!');
-    }
-});
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
