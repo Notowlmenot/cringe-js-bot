@@ -28,18 +28,6 @@ function status1() {
 }
 
 robot.on('message', message => {
-    if(message.content.startsWith(p + 'mute')) {
-	    message.mentions.member.removeRole('462657844538376212')
-    };
-});
-
-robot.on('message', message => {
-    if(message.content.startsWith(p + 'unmute')) {
-	    message.mentions.member.addRole('462657844538376212')
-    };
-});
-
-robot.on('message', message => {
 	if(message.content.startsWith(p + 'delplz')) {
 		message.delete()
 	};
@@ -59,6 +47,7 @@ robot.on('message', message => {
            })
 robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
+	    message.channel.delete()
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
     }
@@ -91,8 +80,7 @@ robot.on('message', message => {
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'kick')) {
 		var ygy = "Успешно"
-	const kicklul = message.mentions.members
-	guild.member.kick(kicklul)
+	message.channel.mentions.member.kick('тест')
 		message.react('380571016994226186')
 		message.channel.send('ygy')
 	}
