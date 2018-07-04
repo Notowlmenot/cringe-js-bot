@@ -14,7 +14,7 @@ robot.on('message', message => {
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
             .setColor('RANDOM')
-            .setDescription('Префикс бота - d!')
+            .setDescription('Префикс бота - !')
 	.setField('help')
             .setFooter("Напиши что хочешь")
             .setTimestamp();
