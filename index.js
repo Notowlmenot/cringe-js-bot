@@ -10,7 +10,7 @@ robot.on('ready', () => {
 });
 	
 robot.on('message', message => {
-    if(message.content.startWith(p + 'help')) {
+    if(message.content.startsWith(p + 'help')) {
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
             .setColor('RANDOM')
