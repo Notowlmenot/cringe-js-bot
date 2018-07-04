@@ -102,8 +102,7 @@ robot.on('message', message => {
     // Send "pong" to the same channel
      var pingsmessage = robot.ping
     var m = message.channel.send('pong!')
-    message.channel.send(m)
-      m.edit('pong!' + pingsmessage)
+    message.channel.send(m + pingsmessage)
   }
 })
 
