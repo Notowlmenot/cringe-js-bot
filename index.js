@@ -97,7 +97,7 @@ robot.on('message', message => {
 		message.channel.send('ygy')
 	}
 });
-client != message => {
+robot.on('message', message => {
 ('message', message => {
   if (message.content === 'ping') {
      const pingsmessage = robot.ping
