@@ -97,10 +97,9 @@ robot.on('message', message => {
 		message.channel.send('ygy')
 	}
 });
-robot.on('message', message => {
+('message', message => {
   if (message.content === 'ping') {
-    // Send "pong" to the same channel
-     var pingsmessage = robot.ping
+     const pingsmessage = robot.ping
     var m = message.channel.send('pong!')
     message.channel.send(m + pingsmessage)
   }
