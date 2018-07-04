@@ -1,11 +1,7 @@
 const Discord = require('discord.js');
 const request = require('request');
 const robot = new Discord.Client();
-var p = (pref);
-robot.on('message', message => {
-    if(message.content.startsWith(p + 'prefix')) {
-        let pref = message.content.slice((p + 'prefix').length);
-	    var p = (pref);
+var p = (!);
     }
 });
 robot.on('ready', () => {
