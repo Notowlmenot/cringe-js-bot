@@ -123,6 +123,4 @@ robot.on('message', message => {
     message.addReaction("➖");
 	  message.addReaction("➕");
 
-  }
-})
 robot.login(process.env.SECRET);
