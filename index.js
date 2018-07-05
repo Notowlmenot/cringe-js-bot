@@ -106,17 +106,6 @@ robot.on('message', message => {
 		message.channel.bulkDelete(delmes)
 		message.channel.send('Успешно удалено' + delmes + ' сообщений')
 	}
-});
-robot.on('message', => {
-  if (message.content.toLowerCase() === prefix + "rand") {
-    var sans = ["https://cdn.discordapp.com/attachments/463927761954799616/463933537763065856/tumblr_nldm38KmTx1rwbf4ro1_540.gif"];
-    var sonuc = sans[Math.floor((Math.random() * sans.length))];
-    const embed = new Discord.RichEmbed()
-    .setColor(344573)
-    .setDescription(` <@${message.author.id}>`)
-    .setImage(`${sonuc}`)
-    return message.channel.sendEmbed(embed);
-  };
-});
+})
 
 robot.login(process.env.SECRET);
