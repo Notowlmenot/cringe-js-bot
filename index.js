@@ -68,7 +68,7 @@ robot.on('message', message => {
 	}
 });
 robot.on('message', message => {
-	if(message.content === (p + 'avatar')) {
+	if(message.startsWith(p + 'avatar')) {
 		const embed = new Discord.RichEmbed()
 		.setTitle('Аватар пользователя:')
             .setColor('RANDOM')
