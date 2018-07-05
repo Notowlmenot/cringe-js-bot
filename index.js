@@ -117,6 +117,13 @@ robot.on('message', message => {
 		message.channel.send('Успешно удалено' + delmes + ' сообщений')
 		console.log('Кто-то удалил сообщения!')
 	}
-})
+});
+  if(msg.channel.id == 371446270264606742 && ( typeof msg.attachments[0] !== 'undefined' || msg.content.search('((?:http|https)(?::\\/{2}[\\w]+)(?:[\\/|\\.]?)(?:[^\\s"]*))') !== -1)){
+    console.log("Начал голосование на сервере");
+    msg.addReaction("380570863873032192");
+    msg.addReaction("");
+	  msg.addReaction("➕");
 
+  }
+});
 robot.login(process.env.SECRET);
