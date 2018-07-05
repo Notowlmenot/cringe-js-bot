@@ -18,6 +18,7 @@ robot.on('message', message => {
             .setFooter("Напиши что хочешь")
             .setTimestamp();
         message.channel.send({embed})
+	    console.log('кто то прописал команду help')
         };
 });
 
@@ -29,6 +30,7 @@ function status1() {
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'delplz')) {
 		message.delete()
+		console.log('Кто то прописал команду "Удали это сообщение"')
 	};
 });
 	    
@@ -42,6 +44,7 @@ robot.on('message', message => {
 	    .setImage('https://images-ext-1.discordapp.net/external/bHgCJDB7OagguZl0LsM3KG2doxboqtrGCew1Mbc-saA/%3Fwidth%3D80%26height%3D80/https/images-ext-1.discordapp.net/external/zOQcnhsC7Ud8tPF-pJQpt51YyrvvP-xwH5c9v02p4Ys/https/thumbs.gfycat.com/SinfulCompetentBeaver-max-1mb.gif')
             .setTimestamp();
 	   message.channel.send({embed})
+	    console.log('Кто-то вошел в афк')
             };
            })
 robot.on('message', message => {
@@ -49,6 +52,7 @@ robot.on('message', message => {
 	    message.delete()
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
+	     console.log('Кто то сказал' + say)
     }
 });
 var messagelol = 'Я работаю!'
@@ -56,6 +60,7 @@ robot.on('message', message => {
     if(message.content === (p + 'check')) {
 	    message.channel.send(messagelol);
 	    message.react('380571016994226186')
+	     console.log('Кто-то чекнул бота на роботоспособность')
     }
 });
 robot.on('message', message => {
@@ -65,6 +70,7 @@ robot.on('message', message => {
             .setColor('RANDOM')
 		.setImage(message.guild.iconURL)
 		 message.channel.send({embed})
+		console.log('Кому то понадобилось узнать логотип сервера')
 	}
 });
 robot.on('message', message => {
@@ -74,18 +80,21 @@ robot.on('message', message => {
             .setColor('RANDOM')
 		.setImage(message.mentions.members.first().avatarURL)
 		 message.channel.send({embed})
+		console.log('Кому то понадобился аватар')
 	}
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'kick')) {
 	message.mentions.members.first().kick()
 		message.channel.send('Успешно кикнут!')
+		console.log('Кто-то кого-то кикнул!')
 	}
 });
 robot.on('message', message => {
   if (message.content === (p + 'ping')) {
 message.channel.send('Pinging...').then(sent => {
     sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
+	console.log('Кто то узнал пинг бота!')
     });
   }
 });
@@ -93,6 +102,7 @@ robot.on('message', message => {
   if (message.content === (p + 'пинг')) {
 message.channel.send('Pinging...').then(sent => {
     sent.edit(`Понг! пинг бота: ${sent.createdTimestamp - message.createdTimestamp}мс`);
+	console.log('Кто то узнал пинг бота!')
     });
   }
 });
@@ -105,6 +115,7 @@ robot.on('message', message => {
 		let delmes = message.content.slice((p + 'delmsg').length);
 		message.channel.bulkDelete(delmes)
 		message.channel.send('Успешно удалено' + delmes + ' сообщений')
+		console.log('Кто-то удалил сообщения!')
 	}
 })
 
