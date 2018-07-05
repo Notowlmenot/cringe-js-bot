@@ -96,24 +96,6 @@ message.channel.send('Pinging...').then(sent => {
     sent.edit(`Понг! пинг бота: ${sent.createdTimestamp - message.createdTimestamp}мс`);
     });
   }
-});
-bot.registerCommand("dog", (msg) => {
-  var dog = "";
-  request('https://random.dog/woof', function(err, resp, body) {
-    dog = body.toString();
-    var res = "https://random.dog/" + dog
-    msg.channel.createMessage(res)
-    bot.createMessage(msg.channel.id, {
-      embed: {
-        title: "Ваш пёс:",
-        image: {url: res}
-      }
-    });
-    console.log("Пёсель подан");
-  };
 })
-  .setDescription:('Выдаёт рандомного пёселя')
-  .setFullDescription('Выдаёт рандомного пёселя с https://random.dog/')
-});
 
 robot.login(process.env.SECRET);
