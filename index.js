@@ -97,8 +97,7 @@ message.channel.send('Pinging...').then(sent => {
     });
   }
 });
-robot.on("dog", (msg) => {
-	if(message.content === (p + 'дог')) {
+bot.registerCommand("dog", (msg) => {
   var dog = "";
   request('https://random.dog/woof', function(err, resp, body) {
     dog = body.toString();
@@ -113,10 +112,9 @@ robot.on("dog", (msg) => {
     console.log("Пёсель подан");
   });
 }, {
-  aliases: ["пес", "пёс", "песель", "пёсель"],
-  description: "Выдаёт рандомного пёселя",
-  fullDescription: "Выдаёт рандомного пёселя с https://random.dog/"
-}
-})
+  .setAliases("пес", "пёс", "песель", "пёсель");
+  .setDescription:('Выдаёт рандомного пёселя')
+  .setFullDescription('Выдаёт рандомного пёселя с https://random.dog/')
+});
 
 robot.login(process.env.SECRET);
