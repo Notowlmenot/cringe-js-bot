@@ -110,12 +110,13 @@ robot.on('guildMemberAdd', (member) => {
 	member.addRole('464444589005340682')
 });
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'delmsg')) {
+	if(message.content.startsWith(p + 'deletemessage')) {
 		message.delete()
 		let delmes = message.content.slice((p + 'delmsg').length);
 		message.channel.bulkDelete(delmes)
 		message.channel.send('Успешно удалено' + delmes + ' сообщений')
 		console.log('Кто-то удалил сообщения!')
+		member.roles.exists('Одмен', 'Одмен')
 	}
 })
 
