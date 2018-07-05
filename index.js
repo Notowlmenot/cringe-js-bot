@@ -106,12 +106,6 @@ robot.on('message', message => {
 		message.channel.bulkDelete(delmes)
 		message.channel.send('Успешно удалено' + delmes + ' сообщений')
 	}
-});
-robot.on('message', message => {
-	let gameCount = gameCount + 1;
-	if(message.content.startsWith(p + 'delmsg')) {
-	message.channel.send('Успешно' + gameCount)
-			}
 })
 
 robot.login(process.env.SECRET);
