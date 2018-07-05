@@ -118,7 +118,7 @@ robot.on('message', message => {
 		console.log('Кто-то удалил сообщения!')
 	}
 });
-  if(msg.channel.id == 371446270264606742
+  if(msg.channel.id == 371446270264606742;
     console.log("Начал голосование на сервере");
     msg.addReaction("380570863873032192");
     msg.addReaction("➖");
