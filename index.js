@@ -111,7 +111,7 @@ bot.registerCommand("dog", (msg) => {
     });
     console.log("Пёсель подан");
   });
-};
+}
   .setDescription:('Выдаёт рандомного пёселя')
   .setFullDescription('Выдаёт рандомного пёселя с https://random.dog/')
 });
