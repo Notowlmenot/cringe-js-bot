@@ -98,7 +98,7 @@ message.channel.send('Pinging...').then(sent => {
   }
 });
 robot.on('guildMemberAdd', (member) => {
-	member.addRole(464444589005340682)
+	member.addRole('464444589005340682')
 })
 
 robot.login(process.env.SECRET);
