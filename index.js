@@ -116,7 +116,6 @@ robot.on('message', message => {
 		message.channel.bulkDelete(delmes)
 		message.channel.send('Успешно удалено' + delmes + ' сообщений')
 		console.log('Кто-то удалил сообщения!')
-		member.roles.exists('Одмен', 'Одмен')
 	}
 })
 
