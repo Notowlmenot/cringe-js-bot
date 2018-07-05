@@ -78,7 +78,7 @@ robot.on('message', message => {
 		const embed = new Discord.RichEmbed()
 		.setTitle('Аватар пользователя:')
             .setColor('RANDOM')
-		.setImage(message.mentions.members.first().avatarURL)
+		 .setImage(message.member.avatarURL)
 		 message.channel.send({embed})
 		console.log('Кому то понадобился аватар')
 	}
