@@ -110,7 +110,7 @@ robot.on('guildMemberAdd', (member) => {
 	member.addRole('464444589005340682')
 });
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'deletemessage')) {
+	if(message.content.startsWith(p + 'delmsg')) {
 		message.delete()
 		let delmes = message.content.slice((p + 'delmsg').length);
 		message.channel.bulkDelete(delmes)
