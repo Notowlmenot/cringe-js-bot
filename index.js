@@ -104,7 +104,8 @@ robot.on('message', message => {
 	if(message.content.startsWith(p + 'delmsg')) {
 		let delmes = message.content.slice((p + 'delmsg').length);
 		message.delete(delmes)
-		message.channel.send('Успешно удалено' + delmes + 'сообщений)
+		message.channel.send('Успешно удалено' + delmes + 'сообщений')
 	}
 })
+
 robot.login(process.env.SECRET);
