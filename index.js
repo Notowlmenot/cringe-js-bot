@@ -72,7 +72,7 @@ robot.on('message', message => {
 		const embed = new Discord.RichEmbed()
 		.setTitle('Аватар пользователя:')
             .setColor('RANDOM')
-		.setImage(message.mentions.members.first().avatarURL)
+		.setImage(message.mentions.members.avatarURL)
 		 message.channel.send({embed})
 	}
 });
