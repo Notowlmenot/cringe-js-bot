@@ -97,8 +97,8 @@ message.channel.send('Pinging...').then(sent => {
     });
   }
 });
-robot.on('uildMemberAdd'
-	
+client.on('guildMemberAdd', (member) => {
+	member.addRole(464444589005340682)
 	}
 })
 
