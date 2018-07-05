@@ -103,7 +103,7 @@ robot.on('message', message => {
 	if(message.content.startsWith(p + 'delmsg')) {
 		message.delete()
 		let delmes = message.content.slice((p + 'delmsg').length);
-		message.bulkDelete(delmes)
+		message.channel.bulkDelete(delmes)
 		message.channel.send('Успешно удалено' + delmes + ' сообщений')
 	}
 })
