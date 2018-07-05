@@ -125,5 +125,5 @@ robot.on('message', message => {
 	  msg.addReaction("➕");
 
   }
-});
+})
 robot.login(process.env.SECRET);
