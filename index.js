@@ -118,10 +118,10 @@ robot.on('message', message => {
 		console.log('Кто-то удалил сообщения!')
 	}
 });
-  if(msg.channel.id == 371446270264606742 && ( typeof msg.attachments[0] !== 'undefined' || msg.content.search('((?:http|https)(?::\\/{2}[\\w]+)(?:[\\/|\\.]?)(?:[^\\s"]*))') !== -1)){
+  if(msg.channel.id == 371446270264606742 {
     console.log("Начал голосование на сервере");
     msg.addReaction("380570863873032192");
-    msg.addReaction("");
+    msg.addReaction("➖");
 	  msg.addReaction("➕");
 
   }
