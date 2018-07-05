@@ -118,10 +118,10 @@ robot.on('message', message => {
 		console.log('Кто-то удалил сообщения!')
 	}
 });
-  if(msg.channel.id('464499934259970058')
-    msg.addReaction("380570863873032192")
-    msg.addReaction("➖");
-	  msg.addReaction("➕");
+  if(message.channel.id('464499934259970058')
+    message.addReaction("380570863873032192")
+    message.addReaction("➖");
+	  message.addReaction("➕");
 
   }
 })
