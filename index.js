@@ -102,7 +102,7 @@ robot.on('guildMemberAdd', (member) => {
 });
 robot.on('message', message => {
 	if (message.content.startsWith(p + 'testrand')) {
-		var random123 =	Math.random(1, 3)
+		var random123 =	Math.random(1, ... 3)
 	message.channel.send(random123)
 	}
 })
