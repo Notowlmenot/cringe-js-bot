@@ -96,6 +96,10 @@ message.channel.send('Pinging...').then(sent => {
     sent.edit(`Понг! пинг бота: ${sent.createdTimestamp - message.createdTimestamp}мс`);
     });
   }
+});
+robot.on('uildMemberAdd'
+	
+	}
 })
 
 robot.login(process.env.SECRET);
