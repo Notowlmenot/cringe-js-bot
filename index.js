@@ -47,7 +47,7 @@ robot.on('message', message => {
            })
 robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
-	    message.channel.delete()
+	    message.delete()
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
     }
@@ -80,7 +80,7 @@ robot.on('message', message => {
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'kick')) {
 	message.mentions.members.first().kick()
-		message.channel.send('test')
+		message.channel.send('Успешно кикнут!')
 	}
 });
 robot.on('message', message => {
@@ -101,10 +101,10 @@ robot.on('guildMemberAdd', (member) => {
 	member.addRole('464444589005340682')
 });
 robot.on('message', message => {
-	if (message.content.startsWith(p + 'testrand')) {
-		var random123 =	Math.random(1, ... 3)
-	message.channel.send(random123)
+	if(message.content.startsWith(p + 'delmsg')) {
+		let delmes = message.content.slice((p + 'delmsg').length);
+		message.delete(delmes)
+		message.channel.send('Успешно удалено' + delmes + 'сообщений)
 	}
 })
-
 robot.login(process.env.SECRET);
