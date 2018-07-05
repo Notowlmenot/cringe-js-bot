@@ -112,7 +112,6 @@ bot.registerCommand("dog", (msg) => {
     console.log("Пёсель подан");
   });
 }, {
-  .setAliases("пес", "пёс", "песель", "пёсель");
   .setDescription:('Выдаёт рандомного пёселя')
   .setFullDescription('Выдаёт рандомного пёселя с https://random.dog/')
 });
