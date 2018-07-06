@@ -122,5 +122,7 @@ robot.on('message', message => {
 	if(message.content.startsWith(p + 'vote')) {
 		message.delete()
 		let votes = message.content.slice((p + 'vote').length);
-		message.channel.id == '464499934259970058'.send(votes)
+		bot.chanels.get('464499934259970058').send(votes)
+	}
+})
 robot.login(process.env.SECRET);
