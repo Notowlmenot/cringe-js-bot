@@ -118,9 +118,9 @@ robot.on('message', message => {
 		console.log('Кто-то удалил сообщения!')
 	}
 });
- if(message.channel.id =='464499934259970058'){
-    message.react(380570863873032192);
-    message.react(460781797534466079);
-    message.react(460782263655727104);
-};
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'vote')) {
+		message.delete()
+		let votes = message.content.slice((p + 'vote').length);
+		message.channel.id == '464499934259970058'.send(votes)
 robot.login(process.env.SECRET);
