@@ -116,6 +116,8 @@ robot.on('message', message => {
 		message.channel.bulkDelete(delmes)
 		message.channel.send('Успешно удалено' + delmes + ' сообщений')
 		console.log('Кто-то удалил сообщения!')
+		   if(!message.member.roles.some(r=>["Джс - плоха", "Одмен"].includes(r.name)) )
+      return message.reply("Прости, но ты не можешь использовать это!")
 	}
 });
 robot.on('message', message => {
