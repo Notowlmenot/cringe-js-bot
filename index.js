@@ -136,19 +136,23 @@ robot.on('message', message => {
 	if(message.content.startsWith(p + 'mute')) {
 		var keke = message.mentions.members.first()
 		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
+			     return message.reply("Прости, но ты не можешь использовать это!")
 		message.delete()
 message.mentions.members.first().removeRole('425149859712991262')
 		message.mentions.members.first().addRole('424399811379200002')
 		let mutes = message.content.slice((p + 'mute').length);
 		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')
 			       message.mentions.members.first().removeRole('424399811379200002')},mutes)
-		message.channel.send('~~Потрачено~~')
+		message.reply("Пользователь замучен!")
 	}
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'unmute')) {
 		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
+			     return message.reply("Прости, но ты не можешь использовать это!")
 		message.mentions.members.first().addRole('425149859712991262')
+		message.mentions.members.first().removeRole('425149859712991262')
+		message.reply("Пользователь размучен!")
 	}
 })
 robot.login(process.env.SECRET);
