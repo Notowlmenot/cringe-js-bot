@@ -105,17 +105,18 @@ robot.on('guildMemberAdd', (member) => {
 	member.addRole('464444589005340682')
 });
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'delete')) {
-				   if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
+    if(message.content.startsWith(p + 'delete')) {
+                   if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
       return message.reply("Прости, но ты не можешь использовать это!")
-		message.delete()
-		let delmes = message.content.slice((p + 'delmsg').length);
-		var result = 'Успешно удалено' + delmes + ' сообщений'
-		message.channel.bulkDelete(delmes)
-		message.channel.send(result)
-		setTimeout(()=>{message.delete(result)},5000)
-		console.log('Кто-то удалил сообщения!')
-	}
+        message.delete()
+        let delmes = message.content.slice((p + 'delmsg').length);
+        var result = 'Успешно удалено' + delmes + ' сообщений'
+        message.channel.bulkDelete(delmes)
+        message.channel.send(result).then((res) => {
+        setTimeout(()=>{res.delete()},5000)
+        console.log('Кто-то удалил сообщения!')
+        })
+    }
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'vote')) {
