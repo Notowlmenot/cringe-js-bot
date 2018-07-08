@@ -136,7 +136,7 @@ robot.on('message', message => {
 	if(message.content.startsWith(p + 'mute')) {
 		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
 		message.delete()
-message.mentions.members.first().role.remove('425149859712991262')
+message.mentions.members.first().removeRole('425149859712991262')
 		let mutes = message.content.slice((p + 'mute').length);
 		setTimeout(()=>{message.mentions.members.first().role.add('425149859712991262')},mutes)
 	}
