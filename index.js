@@ -120,6 +120,14 @@ robot.on('message', message => {
 		message.delete()
 		let votes = message.content.slice((p + 'vote').length);
 		bot.chanels.get('464499934259970058').send(votes)
+		robot.on('message', message => {
 	}
-})
+});
+		robot.on('message', message => {
+			if(message.content.startsWith(p + 'testheh')) {
+				message.channel.send('сообщение будет удалено через 5 секунд!')
+		setTimeout(()=>{message.delete())},5000)
+				message.channel.send('сообщение удалено!, спасибо ззигеру, ~~Слава Украине~~')
+			}
+		})
 robot.login(process.env.SECRET);
