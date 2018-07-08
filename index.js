@@ -110,8 +110,10 @@ robot.on('message', message => {
       return message.reply("Прости, но ты не можешь использовать это!")
 		message.delete()
 		let delmes = message.content.slice((p + 'delmsg').length);
+		var result = 'Успешно удалено' + delmes + ' сообщений'
 		message.channel.bulkDelete(delmes)
-		message.channel.send('Успешно удалено' + delmes + ' сообщений')
+		message.channel.send(result)
+		setTimeout(()=>{result.delete},5000)
 		console.log('Кто-то удалил сообщения!')
 	}
 });
