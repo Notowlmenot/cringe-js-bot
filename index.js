@@ -113,7 +113,7 @@ robot.on('message', message => {
 		var result = 'Успешно удалено' + delmes + ' сообщений'
 		message.channel.bulkDelete(delmes)
 		message.channel.send(result)
-		setTimeout(()=>{result.message.delete()},5000)
+		setTimeout(()=>{message.delete(result)},5000)
 		console.log('Кто-то удалил сообщения!')
 	}
 });
