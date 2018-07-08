@@ -153,8 +153,6 @@ robot.on('message', message => {
 		message.mentions.members.first().addRole('425149859712991262')
 		message.mentions.members.first().removeRole('424399811379200002')
 				message.reply("Пользователь размучен!")
-		else 
-		message.reply('Пользователь не в муте!')
 	}
 })
 robot.login(process.env.SECRET);
