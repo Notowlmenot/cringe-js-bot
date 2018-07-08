@@ -26,13 +26,6 @@ function status1() {
     robot.user.setActivity('На тебя',{ type: "WATCHING" })
     robot.user.setStatus('online')
 }
-
-robot.on('message', message => {
-	if(message.content.startsWith(p + 'delplz')) {
-		message.delete()
-		console.log('Кто то прописал команду "Удали это сообщение"')
-	};
-});
 	    
 robot.on('message', message => {
     if(message.content.startsWith(p + 'afk')) {
@@ -50,6 +43,8 @@ robot.on('message', message => {
 robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
 	    message.delete()
+	    		if(!message.member.roles.some(r=>["Админы", "Доверенные"].includes(r.name)) )
+      return message.reply("Прости, но ты не можешь использовать это!")
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
 	     console.log('Кто то сказал' + say)
