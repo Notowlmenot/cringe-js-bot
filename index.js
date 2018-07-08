@@ -151,7 +151,7 @@ robot.on('message', message => {
 		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
 			     return message.reply("Прости, но ты не можешь использовать это!")
 		message.mentions.members.first().addRole('425149859712991262')
-		message.mentions.members.first().removeRole('425149859712991262')
+		message.mentions.members.first().removeRole('424399811379200002')
 		message.reply("Пользователь размучен!")
 	}
 })
