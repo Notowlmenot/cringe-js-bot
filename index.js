@@ -105,7 +105,7 @@ robot.on('guildMemberAdd', (member) => {
 	member.addRole('464444589005340682')
 });
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'delmsg')) {
+	if(message.content.startsWith(p + 'delete')) {
 				   if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
       return message.reply("Прости, но ты не можешь использовать это!")
 		message.delete()
@@ -113,7 +113,7 @@ robot.on('message', message => {
 		var result = 'Успешно удалено' + delmes + ' сообщений'
 		message.channel.bulkDelete(delmes)
 		message.channel.send(result)
-		setTimeout(()=>{result.delete},5000)
+		setTimeout(()=>{result.message.delete},5000)
 		console.log('Кто-то удалил сообщения!')
 	}
 });
