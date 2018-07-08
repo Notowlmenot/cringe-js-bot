@@ -152,7 +152,9 @@ robot.on('message', message => {
 			     return message.reply("Прости, но ты не можешь использовать это!")
 		message.mentions.members.first().addRole('425149859712991262')
 		message.mentions.members.first().removeRole('424399811379200002')
-		message.reply("Пользователь размучен!")
+				message.reply("Пользователь размучен!")
+		else 
+		message.reply('Пользователь не в муте!')
 	}
 })
 robot.login(process.env.SECRET);
