@@ -138,7 +138,7 @@ robot.on('message', message => {
 		message.delete()
 message.mentions.members.first().removeRole('425149859712991262')
 		let mutes = message.content.slice((p + 'mute').length);
-		setTimeout(()=>{message.mentions.members.first().role.add('425149859712991262')},mutes)
+		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')},mutes)
 	}
 })
 robot.login(process.env.SECRET);
