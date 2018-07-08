@@ -143,7 +143,7 @@ message.mentions.members.first().removeRole('425149859712991262')
 		let mutes = message.content.slice((p + 'mute').length);
 		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')
 			       message.mentions.members.first().removeRole('424399811379200002')},mutes)
-		message.reply("Пользователь замучен!")
+		message.reply("Пользователь" + keke + "был замучен")
 	}
 });
 robot.on('message', message => {
