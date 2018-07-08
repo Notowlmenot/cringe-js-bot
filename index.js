@@ -134,13 +134,13 @@ robot.on('message', message => {
 		});
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'mute')) {
-		var kekeek = message.mentions.members.first()
+		var keke = message.mentions.members.first()
 		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
 		message.delete()
 message.mentions.members.first().removeRole('425149859712991262')
 		let mutes = message.content.slice((p + 'mute').length);
 		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')},mutes)
-		message.channel.send('Пользователь ' + kekeek 'был замучен на ' + mutes)
+		message.channel.send('~~Потрачено~~')
 	}
 })
 robot.login(process.env.SECRET);
