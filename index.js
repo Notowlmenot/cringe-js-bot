@@ -125,7 +125,7 @@ robot.on('message', message => {
 		robot.on('message', message => {
 			if(message.content.startsWith(p + 'testheh')) {
 				message.channel.send('сообщение будет удалено через 5 секунд!')
-		setTimeout(()=>{message.delete())},5000)
+		setTimeout(()=>{message.delete()},5000)
 				message.channel.send('сообщение удалено!, спасибо ззигеру, ~~Слава Украине~~')
 			}
 		})
