@@ -111,7 +111,7 @@ robot.on('guildMemberAdd', (member) => {
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'delmsg')) {
-				   if(!message.member.roles.some(r=>["Джс - плоха", "Неадекват"].includes(r.name)) )
+				   if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
       return message.reply("Прости, но ты не можешь использовать это!")
 		message.delete()
 		let delmes = message.content.slice((p + 'delmsg').length);
