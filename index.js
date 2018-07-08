@@ -1,3 +1,4 @@
+
 const Discord = require('discord.js');
 const request = require('request');
 const robot = new Discord.Client();
@@ -141,7 +142,7 @@ robot.on('message', message => {
 message.mentions.members.first().removeRole('425149859712991262')
 		message.mentions.members.first().addRole('424399811379200002')
 		let mutes = message.content.slice((p + 'mute').length);
-		var vihod = 'Пользователь ' + keke + ' успешно замучен на ' + mutes 'мс'
+		var vihod = 'Пользователь ' + keke + ' успешно замучен на ' + mutes + 'мс'
 		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')
 			       message.mentions.members.first().removeRole('424399811379200002'
 									  )},mutes)
