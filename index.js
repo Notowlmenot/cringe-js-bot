@@ -142,5 +142,11 @@ message.mentions.members.first().removeRole('425149859712991262')
 		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')},mutes)
 		message.channel.send('~~Потрачено~~')
 	}
+});
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'unmute')) {
+		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
+		message.mentions.members.first().addRole('425149859712991262')
+	}
 })
 robot.login(process.env.SECRET);
