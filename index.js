@@ -123,9 +123,6 @@ robot.on('message', message => {
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'vote')) {
-		const hook = new Discord.WebhookClient('465723590654820355', 'ju821U1A_3PLett3mt3OLNOOFiMhdmcoqVBu7H3_QA-WREoCCzK9peBIrs9Xy--lhiN1');
-		robot.webhook.avatar(message.author.avatarURL)
-		robot.webhook.
 		let votes = message.content.slice((p + 'vote').length);
 		robot.channels.get("465676656523083788").send(votes).then((vot) => {
 			vot.react('➕') ///Плюс
