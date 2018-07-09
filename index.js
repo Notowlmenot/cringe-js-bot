@@ -129,8 +129,9 @@ robot.on('message', message => {
 			vot.react('➕') ///Плюс
 			vot.react('380570863873032192') ///Тхонк
 			vot.react('➖') ///минус
-			if(message.content === 'vote')) {
+			if(message.content === 'vote') {
 				message.reply('используйте  (.vote сообщение) ')
+			}
         })
     }
 });
