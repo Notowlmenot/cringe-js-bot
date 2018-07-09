@@ -123,12 +123,12 @@ robot.on('message', message => {
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'vote')) {
-		message.delete()
 		let votes = message.content.slice((p + 'vote').length);
 		robot.channels.get("465676656523083788").send(votes).then((vot) => {
 			vot.react('➕') ///Плюс
 			vot.react('380570863873032192') ///Тхонк
-			vot.react('➖') ///минус
+			vot.react('➖');	 ///минус
+			message.delete()
 			if(message.content === 'vote') {
 				message.reply('используйте  (.vote сообщение) ')
 			}
