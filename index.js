@@ -127,8 +127,8 @@ robot.on('message', message => {
 		let votes = message.content.slice((p + 'vote').length);
 		robot.channels.get("465676656523083788").send(votes).then((vot) => {
 			vot.react('460781797534466079') ///Плюс
-			vot.react('460782263655727104') ///Минус
 			vot.react('380570863873032192') ///Тхонк
+			vot.react('460782263655727104') ///минус
         })
     }
 });
