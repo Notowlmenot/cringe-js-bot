@@ -180,5 +180,5 @@ robot.on('message', message => {
         })
         });
     }
-})}
+})
 robot.login(process.env.SECRET);
