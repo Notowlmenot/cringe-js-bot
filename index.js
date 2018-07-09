@@ -81,6 +81,8 @@ robot.on('message', message => {
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'kick')) {
+		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
+			     return message.reply("Прости, но ты не можешь использовать это!")
 	message.mentions.members.first().kick()
 		message.channel.send('Успешно кикнут!')
 		console.log('Кто-то кого-то кикнул!')
@@ -146,11 +148,12 @@ message.mentions.members.first().removeRole('425149859712991262')
 		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')
 			       message.mentions.members.first().removeRole('424399811379200002')},mutes)
 									  message.reply(result).then((res) => {	
-			setTimeout(()=>{res.delete()},5000))
+			setTimeout(()=>{res.delete()},5000)
 	}
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'unmute')) {
+		message.delete()
 		var result = 'Пользователь размучен!'
 		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
 			     return message.reply("Прости, но ты не можешь использовать это!")
