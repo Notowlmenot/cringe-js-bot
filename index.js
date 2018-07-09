@@ -144,10 +144,9 @@ message.mentions.members.first().removeRole('425149859712991262')
 		let mutes = message.content.slice((p + 'mute' + keke).length);
 		var result = 'Пользователь ' + keke + ' успешно замучен на ' + mutes + 'мс'
 		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')
-			       message.mentions.members.first().removeRole('424399811379200002')
+			       message.mentions.members.first().removeRole('424399811379200002')},mutes)
 									  message.reply(result).then((res) => {	
-			setTimeout(()=>{res.delete()},5000) )},mutes)
-		message.reply(vihod)
+			setTimeout(()=>{res.delete()},5000))
 	}
 });
 robot.on('message', message => {
