@@ -129,11 +129,6 @@ robot.on('message', message => {
 			vot.react('380570863873032192') ///Тхонк
 			vot.react('➖');	 ///минус
 			message.delete()
-			robot.on('message', message => {
-				if(message.content === 'vote') {
-				message.reply('используйте  (.vote сообщение) ')
-				}
-})
         })
     }
 });
