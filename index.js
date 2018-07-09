@@ -178,7 +178,7 @@ robot.on('message', message => {
 		var result = 'время вышло!'
 		setTimeout(()=>{message.reply(result)},timers)
         }
-    }
+    })
 })
 
 robot.login(process.env.SECRET);
