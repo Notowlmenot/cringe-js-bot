@@ -178,7 +178,7 @@ robot.on('message', message => {
                    await vot.react('➖');     ///минус
                     message.delete()
         })
-        }
+        });
     }
 })
 robot.login(process.env.SECRET);
