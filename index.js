@@ -162,6 +162,6 @@ robot.on('message', message => {
 				message.reply(result).then((res) => {
         setTimeout(()=>{res.delete()},5000)
         })
-    }
+    })
 })
 robot.login(process.env.SECRET);
