@@ -177,7 +177,7 @@ robot.on('message', message => {
 		let timers = message.content.slice((p + 'timer').length);
 		var result = 'время вышло!'
 		setTimeout(()=>{message.reply(result)},timers)
-        })
+        }
     }
 })
 
