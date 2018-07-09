@@ -171,5 +171,13 @@ robot.on('message', message => {
         })
     }
 });
-
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'timer')) {
+		message.delete()
+		let timers = message.content.slice((p + 'timer').length);
+		var result = 'время вышло!'
+		setTimeout(()=>{message.reply(result)},timers)
+        })
+    }
+});
 robot.login(process.env.SECRET);
