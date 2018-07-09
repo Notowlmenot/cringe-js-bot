@@ -125,7 +125,7 @@ robot.on('message', message => {
 	if(message.content.startsWith(p + 'vote')) {
 		message.delete()
 		let votes = message.content.slice((p + 'vote').length);
-		bot.chanels.get('464499934259970058').send(votes)
+		message.channels.get("465676656523083788").send(votes)
 	}
 });
 		robot.on('message', message => {
