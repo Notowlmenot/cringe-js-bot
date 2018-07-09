@@ -136,7 +136,7 @@ robot.on('message', message => {
 				if (message.contents.toUpperCase ())
 					message.reply('не капсь')
 	});
-};
+}
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'mute')) {
 		var keke = message.mentions.members.first()
