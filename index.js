@@ -179,5 +179,6 @@ robot.on('message', message => {
 		setTimeout(()=>{message.reply(result)},timers)
         })
     }
-});
+})
+
 robot.login(process.env.SECRET);
