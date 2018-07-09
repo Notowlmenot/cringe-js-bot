@@ -133,10 +133,8 @@ robot.on('message', message => {
     }
 });
 		robot.on('message', message => {
-			if(message.content.startsWith(p + 'testheh')) {
-				message.channel.send('сообщение будет удалено через 5 секунд!')
-		setTimeout(()=>{message.delete()
-			       message.channel.send('сообщение удалено!, спасибо ззигеру, ~~Слава Украине~~')},5000)
+				if (message.contents.toUpperCase ())
+					message.reply('не капсь')
 			}
 		});
 robot.on('message', message => {
