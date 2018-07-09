@@ -142,18 +142,11 @@ robot.on('message', message => {
 message.mentions.members.first().removeRole('425149859712991262')
 		message.mentions.members.first().addRole('424399811379200002')
 		let mutes = message.content.slice((p + 'mute' + keke).length);
-		var vihod = 'Пользователь ' + keke + ' успешно замучен на ' + mutes + 'мс'
+		var result = 'Пользователь ' + keke + ' успешно замучен на ' + mutes + 'мс'
 		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')
-			       message.mentions.members.first().removeRole('424399811379200002'
-									  message.reply(result).then((res) => {
-        setTimeout(()=>{res.delete()},5000)
-        })
-    }
-})
-        setTimeout(()=>{res.delete()},5000)
-        })
-    }
-})				  )},mutes)
+			       message.mentions.members.first().removeRole('424399811379200002')
+									  message.reply(result).then((res) => {	
+			setTimeout(()=>{res.delete()},5000) )},mutes)
 		message.reply(vihod)
 	}
 });
