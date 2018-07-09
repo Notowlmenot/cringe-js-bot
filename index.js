@@ -169,16 +169,4 @@ robot.on('message', message => {
         })
     }
 });
-    if(message.content.startsWith(p + 'test')) {
-        let votes = message.content.slice((p + 'test').length);
-        robot.fetchWebhook('465723590654820355', 'ju821U1A_3PLett3mt3OLNOOFiMhdmcoqVBu7H3_QA-WREoCCzK9peBIrs9Xy--lhiN1').then(webhook => {
-                webhook.send(votes, {username: message.member.displayName, avatarURL: message.author.avatarURL}).then(async (vot) => {
-                        await vot.react('➕') ///Плюс
-                    await vot.react('380570863873032192') ///Тхонк
-                   await vot.react('➖');     ///минус
-                    message.delete()
-        })
-        });
-    }
-})
 robot.login(process.env.SECRET);
