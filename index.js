@@ -148,7 +148,9 @@ robot.on('message', message => {
 message.mentions.members.first().removeRole('425149859712991262')
 		message.mentions.members.first().addRole('424399811379200002')
 		let mutes = message.content.slice((p + 'mute' + keke).length);
-		var result = 'Пользователь ' + keke + ' успешно замучен на ' + mutes + 'мс'
+		var mutes = *1000
+		var mutes = *60000
+		var result = 'Пользователь ' + keke + ' успешно замучен на ' + mutes + 'минут'
 		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')
 			       message.mentions.members.first().removeRole('424399811379200002')},mutes)
 									  message.reply(result).then((res) => {	
@@ -169,4 +171,16 @@ robot.on('message', message => {
         })
     }
 });
+if(message.content.startsWith(p + 'test')) {
+        let votes = message.content.slice((p + 'test').length);
+        robot.fetchWebhook('465723590654820355', 'ju821U1A_3PLett3mt3OLNOOFiMhdmcoqVBu7H3_QA-WREoCCzK9peBIrs9Xy--lhiN1').then(webhook => {
+                webhook.send(votes, {username: message.member.displayName, avatarURL: message.author.avatarURL}).then(async (vot) => {
+                        await vot.react(':heavy_plus_sign:') ///Плюс
+                    await vot.react('380570863873032192') ///Тхонк
+                   await vot.react(':heavy_minus_sign:');     ///минус
+                    message.delete()
+        })
+        });
+    }
+})
 robot.login(process.env.SECRET);
