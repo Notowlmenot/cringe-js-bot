@@ -170,11 +170,10 @@ robot.on('message', message => {
     }
 });
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'test')) {
-		const hook = new Discord.WebhookClient('465723590654820355', 'ju821U1A_3PLett3mt3OLNOOFiMhdmcoqVBu7H3_QA-WREoCCzK9peBIrs9Xy--lhiN1');
-		robot.webhook.avatar(message.author.avatarURL)
-		robot.webhook.name(message.member.displayName)
-		hook.send('wow, это работает!');
-	}
-})
+    if(message.content.startsWith(p + 'test')) {
+            client.fetchWebhook('465723590654820355', 'ju821U1A_3PLett3mt3OLNOOFiMhdmcoqVBu7H3_QA-WREoCCzK9peBIrs9Xy--lhiN1').then(webhook => {
+        webhook.send('нихуя это текст', [username: message.member.displayName, avatarURL: message.author.avatarURL])
+    })
+    }
+}
 robot.login(process.env.SECRET);
