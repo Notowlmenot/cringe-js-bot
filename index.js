@@ -149,7 +149,8 @@ message.mentions.members.first().removeRole('425149859712991262')
 			       message.mentions.members.first().removeRole('424399811379200002')},mutes)
 									  message.reply(result).then((res) => {	
 			setTimeout(()=>{res.delete()},5000)
-	}
+        })
+    }
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'unmute')) {
@@ -162,6 +163,6 @@ robot.on('message', message => {
 				message.reply(result).then((res) => {
         setTimeout(()=>{res.delete()},5000)
         })
-    })
+    }
 })
 robot.login(process.env.SECRET);
