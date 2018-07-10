@@ -162,7 +162,7 @@ robot.on('message', message => {
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'karta')) {
 		let votes = message.content.slice((p + 'test').length);
-		robot.fetchWebhook('', '').then(webhook => {
+		robot.fetchWebhook('466184206842855424', 'VXfIvJHBVLM2Ay7CGbVi60gguaECK-KjRC9GPee4vmVc0SCguidBuQB2AO7lknfx9YGZ').then(webhook => {
 			webhook.send(votes, {username: message.member.displayName, avatarURL: message.author.avatarURL}).then(async (vot) => {
 				await vot.react('➕') ///Плюс
 				await vot.react('380570863873032192') ///Тхонк
