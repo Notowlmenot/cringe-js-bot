@@ -17,86 +17,21 @@ robot.on('message', message => {
             .setTitle("Помощь")
             .setColor('RANDOM')
             .setDescription('Префикс бота - ' + p)
-	.addField('vote')
-	.addField('check')
-	.addField('afk')
-	.addField('say')
-	.addField('logo')
-	.addField('ping, пинг')
-	.addField('kick')
-	.addField('delete число')
-	.addField('mute, unmute')
+	.setField('vote')
+	.setField('check')
+	.setField('afk')
+	.setField('say')
+	.setField('logo')
+	.setField('ping, пинг')
+	.setField('kick')
+	.setField('delete число')
+	.setField('mute, unmute')
             .setFooter("Список команд by Dor")
             .setTimestamp();
         message.channel.send({embed})
 	    console.log('кто то прописал команду help')
         };
 });
-robot.on('message', message => { 
-	if(message.content === (p + 'thelp')
-	   const embed = {
-	   "title": "список команд",
-  "description": "Префикс бота - .",
-  "url": "https://discord.gg/jKEFWV",
-  "color": 44543,
-  "footer": {
-    "text": "Выбирай все что угодно!"
-  },
-  "fields": [
-    {
-      "name": "help",
-      "value": "показать этот список"
-    },
-    {
-      "name": "vote",
-      "value": "Начать голосование, оно начнется в #голосования"
-    },
-    {
-      "name": "delete",
-      "value": "Удалить определенное кол-во сообщений."
-    },
-    {
-      "name": "afk",
-      "value": "Войти в афк",
-      "inline": true
-    },
-    {
-      "name": "say",
-      "value": "Сказать что-нибудь",
-      "inline": true
-	},
-	       {
-      "name": "logo",
-      "value": "Показать логотип сервера",
-      "inline": true
-    },
-	       {
-      "name": "avatar",
-      "value": "Показать аватар",
-      "inline": true
-    },
-	       {
-      "name": "ping",
-      "value": "Узнать пинг бота",
-      "inline": true
-    },
-	       {
-      "name": "kick",
-      "value": "Кикнуть пользователя",
-      "inline": true
-    },
-	       {
-      "name": "mute",
-      "value": "Замутить пользователя (Недоработанно)",
-      "inline": true
-    },
-	       {
-      "name": "unmute",
-      "value": "Размутить пользователя",
-      "inline": true
-    }
-  ]
-};
 function status1() {
     robot.user.setActivity('На тебя',{ type: "WATCHING" })
     robot.user.setStatus('online')
