@@ -2,6 +2,8 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const request = require('request');
 const robot = new Discord.Client();
+const client = new Discord.Client();
+client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 var p = ('.');
 robot.on('ready', () => {
