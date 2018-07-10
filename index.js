@@ -13,22 +13,7 @@ robot.on('ready', () => {
 	
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
-        const embed = new Discord.RichEmbed()
-            .setTitle("Помощь");
-            .setColor('RANDOM');
-            .setDescription('Префикс бота - ' + p);
-	.addField('vote');
-	.addField('check');
-	.addField('afk');
-	.addField('say');
-	.addField('logo');
-	.addField('ping, пинг');
-	.addField('kick');
-	.addField('delete число');
-	.addtField('mute, unmute')
-            .setFooter("Список команд by Dor")
-            .setTimestamp();
-        message.channel.send({embed})
+	message.channel.send('А ты что ожидал увидеть?')
 	    console.log('кто то прописал команду help')
         };
 });
@@ -174,4 +159,17 @@ robot.on('message', message => {
         })
     }
 });
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'karta')) {
+		let votes = message.content.slice((p + 'test').length);
+		robot.fetchWebhook('', '').then(webhook => {
+			webhook.send(votes, {username: message.member.displayName, avatarURL: message.author.avatarURL}).then(async (vot) => {
+				await vot.react('➕') ///Плюс
+				await vot.react('380570863873032192') ///Тхонк
+				await vot.react('➖');     ///минус
+			})
+		});
+		message.delete()
+	}
+})
 robot.login(process.env.SECRET);
