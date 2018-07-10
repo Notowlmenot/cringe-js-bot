@@ -126,7 +126,7 @@ robot.on('message', message => {
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'test')) {
 		let votes = message.content.slice((p + 'test').length);
-		robot.fetchWebhook('465723590654820355', 'ju821U1A_3PLett3mt3OLNOOFiMhdmcoqVBu7H3_QA-WREoCCzK9peBIrs9Xy--lhiN1').then(webhook => {
+		robot.fetchWebhook('465734434537078784', 'veGoe0LieTHK_h-zCU5WK1MWXswaY3bdYst5e1qeLkSIZT6bc-eesuSPjSVHpRFtSyIu').then(webhook => {
 			webhook.send(votes, {username: message.member.displayName, avatarURL: message.author.avatarURL}).then(async (vot) => {
 				await vot.react(':heavy_plus_sign:') ///Плюс
 				await vot.react('380570863873032192') ///Тхонк
