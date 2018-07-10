@@ -124,15 +124,17 @@ robot.on('message', message => {
     }
 });
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'vote')) {
-		let votes = message.content.slice((p + 'vote').length);
-		robot.channels.get("465676656523083788").send(votes).then((vot) => {
-			vot.react('➕') ///Плюс
-			vot.react('380570863873032192') ///Тхонк
-			vot.react('➖');	 ///минус
-			message.delete()
-        })
-    }
+	if(message.content.startsWith(p + 'test')) {
+		let votes = message.content.slice((p + 'test').length);
+		robot.fetchWebhook('465723590654820355', 'ju821U1A_3PLett3mt3OLNOOFiMhdmcoqVBu7H3_QA-WREoCCzK9peBIrs9Xy--lhiN1').then(webhook => {
+			webhook.send(votes, {username: message.member.displayName, avatarURL: message.author.avatarURL}).then(async (vot) => {
+				await vot.react(':heavy_plus_sign:') ///Плюс
+				await vot.react('380570863873032192') ///Тхонк
+				await vot.react(':heavy_minus_sign:');     ///минус
+			})
+		});
+		message.delete()
+	}
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'mute')) {
