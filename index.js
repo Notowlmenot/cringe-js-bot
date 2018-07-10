@@ -17,7 +17,16 @@ robot.on('message', message => {
             .setTitle("Помощь")
             .setColor('RANDOM')
             .setDescription('Префикс бота - ' + p)
-            .setFooter("Напиши что хочешь")
+	.add_field('vote')
+	.add_field('check')
+	.add_field('afk')
+	.add_field('say')
+	.add_field('logo')
+	.add_field('ping, пинг')
+	.add_field('kick')
+	.add_field('delete число')
+	.add_field('mute, unmute')
+            .setFooter("Список команд by Dor")
             .setTimestamp();
         message.channel.send({embed})
 	    console.log('кто то прописал команду help')
@@ -122,7 +131,7 @@ robot.on('message', message => {
     }
 });
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'test')) {
+	if(message.content.startsWith(p + 'vote')) {
 		let votes = message.content.slice((p + 'test').length);
 		robot.fetchWebhook('465734434537078784', 'veGoe0LieTHK_h-zCU5WK1MWXswaY3bdYst5e1qeLkSIZT6bc-eesuSPjSVHpRFtSyIu').then(webhook => {
 			webhook.send(votes, {username: message.member.displayName, avatarURL: message.author.avatarURL}).then(async (vot) => {
