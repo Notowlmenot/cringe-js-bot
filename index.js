@@ -3,8 +3,6 @@ const Discord = require('discord.js');
 const request = require('request');
 const robot = new Discord.Client();
 const client = new Discord.Client();
-const { inspect } = require("util");
-const { post } = require("snekfetch");
 var p = ('.');
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
@@ -128,9 +126,9 @@ robot.on('message', message => {
 		let votes = message.content.slice((p + 'test').length);
 		robot.fetchWebhook('465734434537078784', 'veGoe0LieTHK_h-zCU5WK1MWXswaY3bdYst5e1qeLkSIZT6bc-eesuSPjSVHpRFtSyIu').then(webhook => {
 			webhook.send(votes, {username: message.member.displayName, avatarURL: message.author.avatarURL}).then(async (vot) => {
-				await vot.react(':heavy_plus_sign:') ///Плюс
+				await vot.react('➕') ///Плюс
 				await vot.react('380570863873032192') ///Тхонк
-				await vot.react(':heavy_minus_sign:');     ///минус
+				await vot.react('➖');     ///минус
 			})
 		});
 		message.delete()
