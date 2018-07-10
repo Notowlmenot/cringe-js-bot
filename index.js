@@ -43,7 +43,6 @@ robot.on('message', message => {
            });
  files.forEach((c, ci, ca) => {
         if (!fs.existsSync(`./commands/moderation/test.js`)) return console.error(`Категория ${c} не загружена: не обнаружен файл конфигурации категории.`);
- }
 	       })
 robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
