@@ -32,7 +32,71 @@ robot.on('message', message => {
 	    console.log('кто то прописал команду help')
         };
 });
-
+robot.on('message', message => { 
+	if(message.content === (p + 'thelp')
+	   const embed = {
+	   "title": "список команд",
+  "description": "Префикс бота - .",
+  "url": "https://discord.gg/jKEFWV",
+  "color": 44543,
+  "footer": {
+    "text": "Выбирай все что угодно!"
+  },
+  "fields": [
+    {
+      "name": "help",
+      "value": "показать этот список"
+    },
+    {
+      "name": "vote",
+      "value": "Начать голосование, оно начнется в #голосования"
+    },
+    {
+      "name": "delete",
+      "value": "Удалить определенное кол-во сообщений."
+    },
+    {
+      "name": "afk",
+      "value": "Войти в афк",
+      "inline": true
+    },
+    {
+      "name": "say",
+      "value": "Сказать что-нибудь",
+      "inline": true
+	},
+	       {
+      "name": "logo",
+      "value": "Показать логотип сервера",
+      "inline": true
+    },
+	       {
+      "name": "avatar",
+      "value": "Показать аватар",
+      "inline": true
+    },
+	       {
+      "name": "ping",
+      "value": "Узнать пинг бота",
+      "inline": true
+    },
+	       {
+      "name": "kick",
+      "value": "Кикнуть пользователя",
+      "inline": true
+    },
+	       {
+      "name": "mute",
+      "value": "Замутить пользователя (Недоработанно)",
+      "inline": true
+    },
+	       {
+      "name": "unmute",
+      "value": "Размутить пользователя",
+      "inline": true
+    }
+  ]
+};
 function status1() {
     robot.user.setActivity('На тебя',{ type: "WATCHING" })
     robot.user.setStatus('online')
@@ -121,7 +185,7 @@ robot.on('message', message => {
                    if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
       return message.reply("Прости, но ты не можешь использовать это!")
         message.delete()
-        let delmes = message.content.slice((p + 'delmsg').length);
+        let delmes = message.content.slice((p + 'delete').length);
         var result = 'Успешно удалено' + delmes + ' сообщений'
         message.channel.bulkDelete(delmes)
         message.channel.send(result).then((res) => {
