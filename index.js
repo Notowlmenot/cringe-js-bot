@@ -14,17 +14,17 @@ robot.on('ready', () => {
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
         const embed = new Discord.RichEmbed()
-            .setTitle("Помощь")
-            .setColor('RANDOM')
-            .setDescription('Префикс бота - ' + p)
-	.addField('vote')
-	.addField('check')
-	.addField('afk')
-	.addField('say')
-	.addField('logo')
-	.addField('ping, пинг')
-	.addField('kick')
-	.addField('delete число')
+            .setTitle("Помощь");
+            .setColor('RANDOM');
+            .setDescription('Префикс бота - ' + p);
+	.addField('vote');
+	.addField('check');
+	.addField('afk');
+	.addField('say');
+	.addField('logo');
+	.addField('ping, пинг');
+	.addField('kick');
+	.addField('delete число');
 	.addtField('mute, unmute')
             .setFooter("Список команд by Dor")
             .setTimestamp();
