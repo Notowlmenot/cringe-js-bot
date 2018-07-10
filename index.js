@@ -2,6 +2,7 @@
 const Discord = require('discord.js');
 const request = require('request');
 const robot = new Discord.Client();
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 var p = ('.');
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
