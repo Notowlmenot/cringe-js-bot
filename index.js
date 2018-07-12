@@ -137,7 +137,7 @@ message.mentions.members.first().removeRole('425149859712991262')
 		message.mentions.members.first().addRole('424399811379200002')
 		let mutes = message.content.slice((p + 'mute' + keke).length);
 		var kekmute = mutes * 1000
-		var lulmute = kekmute * 60000
+		var lulmute = kekmute * 60
 		var result = 'Пользователь ' + keke + ' успешно замучен на ' + mutes + ' минут'
 		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')
 			       message.mentions.members.first().removeRole('424399811379200002')},lulmute)
