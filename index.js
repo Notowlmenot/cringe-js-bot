@@ -131,9 +131,7 @@ robot.on('message', message => {
 	if(message.content.startsWith(p + 'mute')) {
 				message.delete()
 		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
-		var prava = return message.reply("Прости, но ты не можешь использовать это!")
-		message.channel(prava)
-		setTimeout(()=>{prava.delete()},5000)
+		return message.reply("Прости, но ты не можешь использовать это!")
 		var keke = message.mentions.members.first()
 message.mentions.members.first().removeRole('425149859712991262')
 		message.mentions.members.first().addRole('424399811379200002')
