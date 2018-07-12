@@ -129,16 +129,18 @@ robot.on('message', message => {
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'mute')) {
-		var keke = message.mentions.members.first()
+				message.delete()
 		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
-			     return message.reply("Прости, но ты не можешь использовать это!")
-		message.delete()
+		var prava = return message.reply("Прости, но ты не можешь использовать это!")
+		message.channel(prava)
+		setTimeout(()=>{prava.delete()},5000)
+		var keke = message.mentions.members.first()
 message.mentions.members.first().removeRole('425149859712991262')
 		message.mentions.members.first().addRole('424399811379200002')
 		let mutes = message.content.slice((p + 'mute' + keke).length);
 		var kekmute = mutes * 1000
 		var lulmute = kekmute * 60000
-		var result = 'Пользователь ' + keke + ' успешно замучен на ' + mutes + 'минут'
+		var result = 'Пользователь ' + keke + ' успешно замучен на ' + mutes + ' минут'
 		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')
 			       message.mentions.members.first().removeRole('424399811379200002')},mutes)
 									  message.reply(result).then((res) => {	
