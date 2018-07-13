@@ -173,7 +173,7 @@ robot.on('message', message => {
 		message.delete()
 	}
 });
-client.on("message", message => {
+robot.on("message", message => {
   const args = message.content.split(" ").slice(1);
 
   if (message.content.startsWith(p + 'eval')) {
