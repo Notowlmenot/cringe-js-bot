@@ -177,7 +177,7 @@ robot.on("message", message => {
   const args = message.content.split(" ").slice(1);
 
   if (message.content.startsWith(p + 'eval')) {
-    if(message.author.id !== config.ownerID) return;
+    if(message.author.id !== 292178755760422915) return;
     try {
       const code = args.join(" ");
       let evaled = eval(code);
