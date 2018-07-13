@@ -174,21 +174,33 @@ robot.on('message', message => {
 	}
 });
 robot.on("message", message => {
-  const args = message.content.split(" ").slice(1);
-
-  if (message.content.startsWith(p + 'eval')) {
-    if(message.author.id !== 292178755760422915) return;
-    try {
-      const code = args.join(" ");
-      let evaled = eval(code);
-
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
-
-      message.channel.send(clean(evaled), {code:"xl"});
-    } catch (err) {
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-    }
+  if (message.content.startsWith(p + 'eval2')) {
+const code = message.content.split(" ").slice(1).join(" ");
+        try {
+         let evaled = eval(code);
+         if (!code) {
+             return message.channel.send("нужна больше кода!");
+         }
+    
+         if (typeof evaled !== 'string')
+           evaled = require('util').inspect(evaled);
+        
+           const embed = new Discord.RichEmbed()
+           .setTitle(`EVAL ✅`)
+       
+           .setColor("0x4f351")
+           .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(evaled)}\`\`\``)
+       
+         message.channel.send({embed});
+       } catch (err) {
+         const embed = new Discord.RichEmbed()
+         .setTitle(`EVAL ❌`)
+  
+         .setColor("0xff0202")
+         .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(err)}\`\`\``)
+    
+         message.channel.send({embed});
+       }
   }
-});
+})
 robot.login(process.env.SECRET);
