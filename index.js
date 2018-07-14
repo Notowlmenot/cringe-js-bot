@@ -99,7 +99,8 @@ message.channel.send('Pinging...').then(sent => {
   }
 });
 robot.on('guildMemberAdd', (member) => {
-	member.addRole('464444589005340682')
+	member.addRole('467526203713126410')
+	member.send('привет')
 });
 robot.on('message', message => {
     if(message.content.startsWith(p + 'delete')) {
