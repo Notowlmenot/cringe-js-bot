@@ -175,6 +175,8 @@ robot.on('message', message => {
 });
 robot.on("message", message => {
   if (message.content.startsWith(p + 'eval')) {
+	  if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
+			     return message.reply("Прости, но ты не можешь использовать это!")
 const code = message.content.split(" ").slice(1).join(" ");
         try {
          let evaled = eval(code);
