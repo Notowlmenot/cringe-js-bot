@@ -140,7 +140,7 @@ message.mentions.members.first().removeRole('425149859712991262')
 		let mutes = message.content.slice((p + 'mute' + keke).length);
 		var kekmute = mutes * 1000
 		var lulmute = kekmute * 60
-		var result = 'Пользователь ' + keke + ' успешно замучен на ' + mutes + ' минут'
+		var result = 'замучен до того момента, как его величеству заблагорассудится размутить'
 		setTimeout(()=>{message.mentions.members.first().addRole('425149859712991262')
 			       message.mentions.members.first().removeRole('424399811379200002')
 			       console.log('Пользователь должен быть размучен')},lulmute)
