@@ -18,7 +18,7 @@ robot.on('message', message => {
         };
 });
 function status1() {
-    robot.user.setActivity('На тебя',{ type: "STREAMING" })
+    robot.user.setActivity('Тебя',{ type: "STREAMING" })
     robot.user.setStatus('IDLE')
 }
 robot.on('message', message => {
