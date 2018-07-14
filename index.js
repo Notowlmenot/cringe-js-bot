@@ -18,7 +18,7 @@ robot.on('message', message => {
         };
 });
 function status1() {
-    robot.user.setActivity('На тебя',{ type: "WATCHING" })
+    robot.user.setActivity('На тебя',{ type: "PLAYING" })
     robot.user.setStatus('online')
 }
 robot.on('message', message => {
@@ -174,7 +174,7 @@ robot.on('message', message => {
 	}
 });
 robot.on("message", message => {
-  if (message.content.startsWith(p + 'eval2')) {
+  if (message.content.startsWith(p + 'eval')) {
 const code = message.content.split(" ").slice(1).join(" ");
         try {
          let evaled = eval(code);
