@@ -205,5 +205,19 @@ const code = message.content.split(" ").slice(1).join(" ");
          message.channel.send({embed});
        }
   }
+});
+robot.on("message", message => {
+  if (message.content.startsWith(p + 'test2')) {
+var embed = new Discord.RichEmbed()
+.setTitle("Роли")
+.setColor("#9ab973")
+.setDescription('CONTROL - роль для создателей, главных.
+'Editman - управляющий, следит за сервером.
+'Звезда star - самые популярные на сервере, эту роль можно купить.
+'Donate dollar - роль для донатеров, задонативших 10, или более рублей.
+'Участник - участники сервера")'
+.setFooter("AMS | Информация о ролях")
+message.channel.send({embed});
+  }
 })
 robot.login(process.env.SECRET);
