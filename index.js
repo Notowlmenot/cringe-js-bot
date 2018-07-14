@@ -12,7 +12,7 @@ robot.on('ready', () => {
 });
 	
 robot.on('message', message => {
-    if(message.content.startsWith(p + 'help', p + 'халп')) {
+    if(message.content.startsWith(p + 'help')) {
 	message.channel.send('А ты что ожидал увидеть?')
 	    console.log('кто то прописал команду help')
         };
