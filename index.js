@@ -85,7 +85,8 @@ robot.on('message', message => {
   if (message.content === (p + 'ping')) {
 message.channel.send('Pinging...').then(sent => {
     sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
-	console.log('Кто то узнал пинг бота!')
+	var pingses = sent.createdTimestamp - message.createdTimestamp
+	console.log('Кто то узнал пинг бота, он равен ' + pingses)
     });
   }
 });
