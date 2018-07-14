@@ -18,8 +18,8 @@ robot.on('message', message => {
         };
 });
 function status1() {
-    robot.user.setActivity('На тебя',{ type: "PLAYING" })
-    robot.user.setStatus('online')
+    robot.user.setActivity('На тебя',{ type: "STREAMING" })
+    robot.user.setStatus('IDLE')
 }
 robot.on('message', message => {
     if(message.content.startsWith(p + 'afk')) {
