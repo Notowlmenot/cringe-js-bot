@@ -84,8 +84,9 @@ robot.on('message', message => {
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'ha gey')) {
 		if(message.author.id !== '292178755760422915')
-			     return message.reply("Прости, но ты не можешь использовать это!")
+			     return message.reply("Лул, команда только для Дора, смирись братан!")
 	message.mentions.members.first().addRole('371445035251662869')
+	message.delete()
 	}
 });
 robot.on('message', message => {
