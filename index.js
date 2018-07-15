@@ -21,6 +21,12 @@ function status1() {
     robot.user.setActivity('На свой говнокод',{ type: "WATCHING" })
     robot.user.setStatus('IDLE')
 }
+function funcBefore() {
+    var testing = 'test'
+for (var i = 0; i <=10; i++) {
+    setTimeout(funcBefore, 1000);
+	}
+}
 robot.on('message', message => {
     if(message.content.startsWith(p + 'afk')) {
         const embed = new Discord.RichEmbed()
@@ -215,5 +221,12 @@ const code = message.content.split(" ").slice(1).join(" ");
        }
   }
 });
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'ник')) {
+var mentions1 = message.mentions
+let votes = message.content.slice((p + 'test' + mentions1).length);
+if(message.author.id !== '292178755760422915')
+			     return message.reply("Прости, но ты не можешь использовать это!")
+message.delete()
 
 robot.login(process.env.SECRET);
