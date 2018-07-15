@@ -222,7 +222,7 @@ let vtes = message.content.slice((p + 'ник' + mentions1).length);
 if(message.author.id !== '292178755760422915')
 			     return message.reply("Прости, но ты не можешь использовать это!")
 message.delete()
-message.mentions.members.first().setNickname('vtes')
+message.mentions.members.first().setNickname(vtes)
 	}
 })
 robot.login(process.env.SECRET);
