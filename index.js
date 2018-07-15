@@ -82,6 +82,13 @@ robot.on('message', message => {
 	}
 });
 robot.on('message', message => {
+	if(message.content.startsWith(p + 'ha gey')) {
+		if(message.author.id !== '292178755760422915')
+			     return message.reply("Прости, но ты не можешь использовать это!")
+	message.mentions.members.first().addRole('371445035251662869')
+	}
+});
+robot.on('message', message => {
   if (message.content === (p + 'ping')) {
 message.channel.send('Pinging...').then(sent => {
     sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
@@ -207,4 +214,5 @@ const code = message.content.split(" ").slice(1).join(" ");
        }
   }
 });
+
 robot.login(process.env.SECRET);
