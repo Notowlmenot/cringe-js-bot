@@ -223,6 +223,7 @@ if(message.author.id !== '292178755760422915')
 			     return message.reply("Прости, но ты не можешь использовать это!")
 message.delete()
 message.mentions.members.first().setNickname(vtes)
+console.log(vtes)
 	}
 })
 robot.login(process.env.SECRET);
