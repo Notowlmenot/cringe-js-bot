@@ -114,6 +114,7 @@ robot.on('message', message => {
     if(message.content.startsWith(p + 'delete')) {
                    if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
       return message.reply("Прости, но ты не можешь использовать это!")
+try {
         message.delete()
         let delmes = message.content.slice((p + 'delete').length);
         var result = 'Успешно удалено' + delmes + ' сообщений'
@@ -121,6 +122,9 @@ robot.on('message', message => {
         message.channel.send(result).then((res) => {
         setTimeout(()=>{res.delete()},5000)
         console.log('Кто-то удалил сообщения!')
+	} catch(e) {
+message.reply('Это не число!');
+}
         })
     }
 });
