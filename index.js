@@ -122,7 +122,7 @@ try {
         message.channel.send(result).then((res) => {
         setTimeout(()=>{res.delete()},5000)
         console.log('Кто-то удалил сообщения!')
-	} catch(e) {
+	} catch(err) {
 message.reply('Это не число!');
 }
         })
