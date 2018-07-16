@@ -4,6 +4,7 @@ const request = require('request');
 const robot = new Discord.Client();
 const client = new Discord.Client();
 var p = ('.');
+var ownerid = 292178755760422915
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
@@ -74,6 +75,7 @@ robot.on('message', message => {
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'kick')) {
+		if(message.author.id !== '292178755760422915')
 		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
 			     return message.reply("Прости, но ты не можешь использовать это!")
 	message.mentions.members.first().kick()
@@ -112,7 +114,8 @@ robot.on('guildMemberAdd', (member) => {
 });
 robot.on('message', message => {
     if(message.content.startsWith(p + 'delete')) {
-                   if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
+                   if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )\
+		   if(message.author.id !== '292178755760422915')
       return message.reply("Прости, но ты не можешь использовать это!")
         message.delete()
         let delmes = message.content.slice((p + 'delete').length);
