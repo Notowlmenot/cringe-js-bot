@@ -234,7 +234,7 @@ console.log(vtes)
 		};
 	};
     });
-});
+})
 
 var colors = new Map();
 colors.set("помидорка", "443838163853508608");
