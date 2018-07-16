@@ -278,5 +278,5 @@ function removeColors(m, add) {
 			} else {return message.reply("Неправильный цвет")};
 	};
     };
-})
+});
 robot.login(process.env.SECRET);
