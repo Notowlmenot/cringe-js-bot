@@ -225,8 +225,9 @@ message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log(vtes)
 	}
-});
-var помидорка = "443838163853508608";
+})
+robot.login(process.env.SECRET);
+/*var помидорка = "443838163853508608";
 var водянной = "443838488261951488";
 var виноградный = "443839613501440001";
 var серый = "444095949594296321";
@@ -266,5 +267,4 @@ function removeColors(m, add = undefined) {
 	m.removeRole(золотой);
   if(add != undefined){
     m.addRole(add);
-}
-robot.login(process.env.SECRET);
+}*\
