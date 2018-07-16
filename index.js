@@ -229,8 +229,4 @@ message.mentions.members.first().setNickname(vtes)
 console.log('ник был сменен на' + vtes)
 	}
 })
-robot.on('ready', () => {
-	message.guild.channels.get("371465948814639104").send("норм")
-    console.log('Бот запустилсся')
-})
 robot.login(process.env.SECRET);
