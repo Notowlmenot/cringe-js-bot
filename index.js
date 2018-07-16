@@ -278,6 +278,5 @@ function removeColors(m, add) {
 		};
 	};
     });
-})
 
 robot.login(process.env.SECRET);
