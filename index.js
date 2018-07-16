@@ -4,7 +4,6 @@ const request = require('request');
 const robot = new Discord.Client();
 const client = new Discord.Client();
 var p = ('.');
-var ownerid = 292178755760422915
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
