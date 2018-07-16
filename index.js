@@ -268,17 +268,4 @@ function removeColors(m, add = undefined) {
   if(add != undefined){
     m.addRole(add);
 } */
-robot.on('message', message => {
-	if(message.content.startsWith(p + 'votere')) {
-		let votes = message.content.slice((p + 'test').length);
-		robot.fetchWebhook('468271676321300520', 'O0qZwJwGpk9yzVFkZA5B-tL-mYXsLLk5ROmR_8MmGqT0SRge3CQCZn87FB16V9BQMR7s').then(webhook => {
-			webhook.send(votes, {username: message.member.displayName, avatarURL: message.author.avatarURL}).then(async (vot) => {
-				await vot.react('➕') ///Плюс
-				await vot.react('380570863873032192') ///Тхонк
-				await vot.react('➖');     ///минус
-			})
-		});
-		message.delete()
-	}
-});
 robot.login(process.env.SECRET);
