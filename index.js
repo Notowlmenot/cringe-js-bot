@@ -226,7 +226,6 @@ message.mentions.members.first().setNickname(vtes)
 console.log(vtes)
 	}
 })
-robot.login(process.env.SECRET);
 /*
 var помидорка = "443838163853508608";
 var водянной = "443838488261951488";
@@ -268,4 +267,5 @@ function removeColors(m, add = undefined) {
 	m.removeRole(золотой);
   if(add != undefined){
     m.addRole(add);
-} *\
+} */
+robot.login(process.env.SECRET);
