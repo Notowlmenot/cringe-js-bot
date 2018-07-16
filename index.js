@@ -225,18 +225,7 @@ message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log(vtes)
 	}
-	robot.on('message', message => {
-	if(message.content.startsWith(p + 'цвет')) {
-		if(message.guild == "443820923590541312"){
-			if(colors.has(message.content.slice(5))){
-				removeColors(message.member, colors.get(message.content.slice(5)));
-			} else {return message.reply("Неправильный цвет")};
-		};
-	};
-    });
-})
-
-var colors = new Map();
+	var colors = new Map();
 colors.set("помидорка", "443838163853508608");
 colors.set("водянной", "443838488261951488");
 colors.set("виноградный", "443839613501440001");
@@ -277,4 +266,15 @@ function removeColors(m, add) {
 	m.removeRole(colors.get("золотой"));
 	m.addRole(add);
 }
+	robot.on('message', message => {
+	if(message.content.startsWith(p + 'цвет')) {
+		if(message.guild == "443820923590541312"){
+			if(colors.has(message.content.slice(5))){
+				removeColors(message.member, colors.get(message.content.slice(5)));
+			} else {return message.reply("Неправильный цвет")};
+		};
+	};
+    });
+})
+
 robot.login(process.env.SECRET);
