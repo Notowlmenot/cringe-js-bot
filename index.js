@@ -39,6 +39,7 @@ robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
 	    message.delete()
 	    		if(!message.member.roles.some(r=>["Админы", "Доверенные"].includes(r.name)) )
+				if(message.author.id !== '292178755760422915')
       return message.reply("Прости, но ты не можешь использовать это!")
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
