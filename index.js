@@ -279,4 +279,8 @@ robot.on('message', message => {
  };
  };
 });
+
+robot.on('ready', ()=>{
+message.guild.channels.get("371447189815296001").send("Кто меня разбудил?!")
+}
 robot.login(process.env.SECRET);
