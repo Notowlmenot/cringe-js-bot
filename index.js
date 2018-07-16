@@ -272,11 +272,9 @@ function removeColors(m, add) {
 }
 	robot.on('message', message => {
 	if(message.content.startsWith(p + 'цвет')) {
-		if(message.guild == "443820923590541312"){
 			if(colors.has(message.content.slice(5))){
 				removeColors(message.member, colors.get(message.content.slice(5)));
 			} else {return message.reply("Неправильный цвет")};
-		};
 	};
     });
 })
