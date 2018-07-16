@@ -226,7 +226,7 @@ message.mentions.members.first().setNickname(vtes)
 console.log(vtes)
 	}
 	if(message.content.startsWith(p + 'цвет')){
-		if(message.guild == "467418241535311886"){
+		if(message.guild == "443820923590541312"){
 			if(colors.has(message.content.slice(5))){
 				removeColors(message.member, colors.get(message.content.slice(5)));
 			} else {return message.reply("Неправильный цвет")};
