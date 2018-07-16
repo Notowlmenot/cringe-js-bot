@@ -228,6 +228,7 @@ message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log(vtes)
 	}
+});
 	var colors = new Map();
 colors.set("помидорка", "443838163853508608");
 colors.set("водянной", "443838488261951488");
