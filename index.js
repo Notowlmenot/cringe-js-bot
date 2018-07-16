@@ -226,46 +226,54 @@ message.mentions.members.first().setNickname(vtes)
 console.log(vtes)
 	}
 })
-/*
-var помидорка = "443838163853508608";
-var водянной = "443838488261951488";
-var виноградный = "443839613501440001";
-var серый = "444095949594296321";
-var черный = "443838296553160714";
-var морскаяволна = "443838370406465537";
-var туча = "443838748417982464";
-var тархун = "443839487768788992";
-var лиственный = "443839351529537546";
-var снег = "443838568478146560";
-var деревянный = "443840639050842123";
-var синий = "443841323070521355";
-var темнофиолетовый = "443841554277466122";
-var розовый = "443841093365399572";
-var фуксия = "450002497063354369";
-var темнорозовый= "444096240901160961";
-var небесный = "443839230205231116";
-var золотой = "443842038484697109";
-
-function removeColors(m, add = undefined) {
-	m.removeRole(помидорка);
-	m.removeRole(водянной);	
-	m.removeRole(виноградный);
-	m.removeRole(серый);
-	m.removeRole(черный);
-	m.removeRole(морская волна);
-	m.removeRole(туча);
-	m.removeRole(тархун);
-	m.removeRole(лиственный);
-	m.removeRole(снег);
-	m.removeRole(деревянный);
-	m.removeRole(синий);
-	m.removeRole(темнофиолетовый);
-	m.removeRole(розовый);
-	m.removeRole(фуксия);
-	m.removeRole(темнорозовый);
-	m.removeRole(небесный);
-	m.removeRole(золотой);
-  if(add != undefined){
-    m.addRole(add);
-} */
+	if(message.content.startsWith(p + 'цвет')){
+ 		if(message.guild == "467418241535311886"){
+ 			if(colors.has(message.content.slice(5))){
+ 				removeColors(message.member, colors.get(message.content.slice(5)));
+ 			} else {return message.reply("Неправильный цвет")};
+ 		};
+ 	};
+  })
+  
+	var colors = new Map();
+ colors.set("помидорка", "443838163853508608");
+ colors.set("водянной", "443838488261951488");
+ colors.set("виноградный", "443839613501440001");
+ colors.set("серый", "444095949594296321");
+ colors.set("черный", "443838296553160714");
+ colors.set("морскаяволна", "443838370406465537");
+ colors.set("туча", "443838748417982464");
+ colors.set("тархун", "443839487768788992");
+ colors.set("лиственный", "443839351529537546");
+ colors.set("снег", "443838568478146560");
+ сolors.set("деревянный", "443840639050842123");
+ colors.set("синий", "443841323070521355");
+ colors.set("темнофиолетовый", "443841554277466122");
+ colors.set("розовый", "443841093365399572");
+ colors.set("фуксия", "450002497063354369");
+ colors.set("темнорозовый", "444096240901160961");
+ colors.set("небесный", "443839230205231116");
+ colors.set("золотой", "443842038484697109");
+ 
+ function removeColors(m, add) {
+ 	m.removeRole(colors.get("помидорка"));
+ 	m.removeRole(colors.get("водянной"));	
+ 	m.removeRole(colors.get("виноградный"));
+ 	m.removeRole(colors.get("серый"));
+ 	m.removeRole(colors.get("черный"));
+ 	m.removeRole(colors.get("морская волна"));
+ 	m.removeRole(colors.get("туча"));
+ 	m.removeRole(colors.get("тархун"));
+ 	m.removeRole(colors.get("лиственный"));
+ 	m.removeRole(colors.get("снег"));
+ 	m.removeRole(colors.get("деревянный"));
+ 	m.removeRole(colors.get("синий"));
+ 	m.removeRole(colors.get("темнофиолетовый"));
+ 	m.removeRole(colors.get("розовый"));
+ 	m.removeRole(colors.get("фуксия"));
+ 	m.removeRole(colors.get("темнорозовый"));
+ 	m.removeRole(colors.get("небесный"));
+ 	m.removeRole(colors.get("золотой"));
+ 	m.addRole(add);
+ }
 robot.login(process.env.SECRET);
