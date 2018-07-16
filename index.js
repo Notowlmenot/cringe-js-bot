@@ -225,13 +225,15 @@ message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log(vtes)
 	}
-	if(message.content.startsWith(p + 'цвет')){
+	robot.on('message', message => {
+	if(message.content.startsWith(p + 'ник')) {
 		if(message.guild == "443820923590541312"){
 			if(colors.has(message.content.slice(5))){
 				removeColors(message.member, colors.get(message.content.slice(5)));
 			} else {return message.reply("Неправильный цвет")};
 		};
 	};
+    };
 })
 
 var colors = new Map();
