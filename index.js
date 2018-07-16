@@ -233,6 +233,7 @@ console.log(vtes)
 		};
 	};
 })
+
 var colors = new Map();
 colors.set("помидорка", "443838163853508608");
 colors.set("водянной", "443838488261951488");
@@ -274,5 +275,4 @@ function removeColors(m, add) {
 	m.removeRole(colors.get("золотой"));
 	m.addRole(add);
 }
-
 robot.login(process.env.SECRET);
