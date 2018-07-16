@@ -226,58 +226,8 @@ if(message.author.id !== '292178755760422915')
 			     return message.reply("Прости, но ты не можешь использовать это!")
 message.delete()
 message.mentions.members.first().setNickname(vtes)
-console.log(vtes)
-	}
-	var colors = new Map();
-colors.set("помидорка", "443838163853508608");
-colors.set("водянной", "443838488261951488");
-colors.set("виноградный", "443839613501440001");
-colors.set("серый", "444095949594296321");
-colors.set("черный", "443838296553160714");
-colors.set("морскаяволна", "443838370406465537");
-colors.set("туча", "443838748417982464");
-colors.set("тархун", "443839487768788992");
-colors.set("лиственный", "443839351529537546");
-colors.set("снег", "443838568478146560");
-colors.set("деревянный", "443840639050842123");
-colors.set("синий", "443841323070521355");
-colors.set("темнофиолетовый", "443841554277466122");
-colors.set("розовый", "443841093365399572");
-colors.set("фуксия", "450002497063354369");
-colors.set("темнорозовый", "444096240901160961");
-colors.set("небесный", "443839230205231116");
-colors.set("золотой", "443842038484697109");
-
-function removeColors(m, add) {
-	m.removeRole(colors.get("помидорка"));
-	m.removeRole(colors.get("водянной"));	
-	m.removeRole(colors.get("виноградный"));
-	m.removeRole(colors.get("серый"));
-	m.removeRole(colors.get("черный"));
-	m.removeRole(colors.get("морская волна"));
-	m.removeRole(colors.get("туча"));
-	m.removeRole(colors.get("тархун"));
-	m.removeRole(colors.get("лиственный"));
-	m.removeRole(colors.get("снег"));
-	m.removeRole(colors.get("деревянный"));
-	m.removeRole(colors.get("синий"));
-	m.removeRole(colors.get("темнофиолетовый"));
-	m.removeRole(colors.get("розовый"));
-	m.removeRole(colors.get("фуксия"));
-	m.removeRole(colors.get("темнорозовый"));
-	m.removeRole(colors.get("небесный"));
-	m.removeRole(colors.get("золотой"));
-	m.addRole(add);
-}
-robot.on('message', message => {
-  if(message.content.startsWith(p + 'цвет')) {
-   if(colors.has(message.content.slice(5))){
-    removeColors(message.member, colors.get(message.content.slice(5)));
-   } else {return message.reply("Неправильный цвет")};
-  };
- };
- };
-});
+console.log('ник был сменен на' + vtes)
+	})
 
 robot.on('ready', ()=>{
 message.guild.channels.get("371447189815296001").send("Кто меня разбудил?!")
