@@ -225,5 +225,46 @@ message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log(vtes)
 	}
-})
+});
+var помидорка = "443838163853508608";
+var водянной = "443838488261951488";
+var виноградный = "443839613501440001";
+var серый = "444095949594296321";
+var черный = "443838296553160714";
+var морскаяволна = "443838370406465537";
+var туча = "443838748417982464";
+var тархун = "443839487768788992";
+var лиственный = "443839351529537546";
+var снег = "443838568478146560";
+var деревянный = "443840639050842123";
+var синий = "443841323070521355";
+var темнофиолетовый = "443841554277466122";
+var розовый = "443841093365399572";
+var фуксия = "450002497063354369";
+var темнорозовый= "444096240901160961";
+var небесный = "443839230205231116";
+var золотой = "443842038484697109";
+
+function removeColors(m, add = undefined) {
+	m.removeRole(помидорка);
+	m.removeRole(водянной);	
+	m.removeRole(виноградный);
+	m.removeRole(серый);
+	m.removeRole(черный);
+	m.removeRole(морская волна);
+	m.removeRole(туча);
+	m.removeRole(тархун);
+	m.removeRole(лиственный);
+	m.removeRole(снег);
+	m.removeRole(деревянный);
+	m.removeRole(синий);
+	m.removeRole(темнофиолетовый);
+	m.removeRole(розовый);
+	m.removeRole(фуксия);
+	m.removeRole(темнорозовый);
+	m.removeRole(небесный);
+	m.removeRole(золотой);
+  if(add != undefined){
+    m.addRole(add);
+}
 robot.login(process.env.SECRET);
