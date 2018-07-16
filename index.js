@@ -228,8 +228,5 @@ message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log('ник был сменен на' + vtes)
 	}
-});
-robot.on('ready', ()=>{
-message.guild.channels.get("371447189815296001").send("Кто меня разбудил?!")
 })
 robot.login(process.env.SECRET);
