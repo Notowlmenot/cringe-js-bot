@@ -218,7 +218,7 @@ const code = message.content.split(" ").slice(1).join(" ");
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'ник')) {
 var mentions1 = message.mentions
-const vtes = message.content.slice(28).join(" ");
+const vtes = message.content.slice(28);
 if(message.author.id !== '292178755760422915')
 			     return message.reply("Прости, но ты не можешь использовать это!")
 message.delete()
