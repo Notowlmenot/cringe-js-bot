@@ -227,7 +227,8 @@ if(message.author.id !== '292178755760422915')
 message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log('ник был сменен на' + vtes)
-	};
+	}
+});
 robot.on('ready', ()=>{
 message.guild.channels.get("371447189815296001").send("Кто меня разбудил?!")
 }
