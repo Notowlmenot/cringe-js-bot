@@ -277,6 +277,7 @@ robot.on('message', message => {
     removeColors(message.member, colors.get(message.content.slice(5)));
    } else {return message.reply("Неправильный цвет")};
   };
+  };
  };
 });
 robot.login(process.env.SECRET);
