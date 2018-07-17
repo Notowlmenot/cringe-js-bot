@@ -228,10 +228,5 @@ message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log('ник был сменен на' + vtes)
 	}
-});
-robot.on('message', message => {
-	if(message.content.startsWith(p + 'test')) {
-message.user.send('test')
-	}
 })
 robot.login(process.env.SECRET);
