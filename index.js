@@ -230,7 +230,7 @@ console.log('ник был сменен на' + vtes)
 	}
 });
 robot.on('message', message => {
-	if(message.content.startWith(p + 'test')) {
+	if(message.content.startsWith(p + 'test')) {
 message.user.send('test')
 	}
 })
