@@ -220,6 +220,7 @@ const code = args.join(" ").replace(/client\.token|client\[.token.\]/ig, 'proces
                 .replace(/`/g, "`" + String.fromCharCode(8203))
                 .replace(/@/g, "@" + String.fromCharCode(8203));
         }
+  })
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'ник')) {
 var mentions1 = message.mentions
