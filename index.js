@@ -190,34 +190,36 @@ robot.on("message", message => {
   if (message.content.startsWith(p + 'eval')) {
 	  if(message.author.id !== '292178755760422915')
 			     return message.reply("Прости, но ты не можешь использовать это!")
-const code = message.content.split(" ").slice(1).join(" ");
+const code = args.join(" ").replace(/client\.token|client\[.token.\]/ig, 'process.env.TOKEN');
+        const token = client.token.split("").join("[^]{0,2}");
+        const rev = client.token.split("").reverse().join("[^]{0,2}");
+        const filter = new RegExp(`${token}|${rev}`, "g");
         try {
-         let evaled = eval(code);
-         if (!code) {
-             return message.channel.send("нужна больше кода!");
-         }
-    
-         if (typeof evaled !== 'string')
-           evaled = require('util').inspect(evaled);
-        
-           const embed = new Discord.RichEmbed()
-           .setTitle(`EVAL ✅`)
-       
-           .setColor("0x4f351")
-           .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(evaled)}\`\`\``)
-       
-         message.channel.send({embed});
-       } catch (err) {
-         const embed = new Discord.RichEmbed()
-         .setTitle(`EVAL ❌`)
-  
-         .setColor("0xff0202")
-         .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(err)}\`\`\``)
-    
-         message.channel.send({embed});
-       }
-  }
-});
+            let output = eval(code);
+            if (output instanceof Promise || (Boolean(output) && typeof output.then === "function" && typeof output.catch === "function")) output = await output;
+            output = inspect(output, { depth: 0, maxArrayLength: null });
+            output = output.replace(filter, "[TOKEN]");
+            output = clean(output);
+            if (output.length < 1950) {
+                //Отправляет пользователю данные эмуляции.
+                message.author.send(`\`\`\`js\n${output}\n\`\`\``);
+                //Ставит реакцию (выполнено).
+                message.react("✅")
+            } else {
+                message.author.send(`${output}`, {split:"\n", code:"js"});
+            }
+        } catch (error) {
+            //Захватывает ошибку и говорит об этом.
+            message.channel.send(`Произошла ошибка \`\`\`js\n${error}\`\`\``);
+            //Ставит реакцию (Ошибка).
+            message.react("❎")
+        }
+
+        function clean(text)  {
+            return text
+                .replace(/`/g, "`" + String.fromCharCode(8203))
+                .replace(/@/g, "@" + String.fromCharCode(8203));
+        }
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'ник')) {
 var mentions1 = message.mentions
