@@ -231,5 +231,6 @@ message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log('ник был сменен на' + vtes)
 	}
+}
 })
 robot.login(process.env.SECRET);
