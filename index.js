@@ -231,16 +231,14 @@ console.log('ник был сменен на' + vtes)
 });
 robot.on('message', message => {
 	if(message.content.startsWith(message)) {
-		let votes = message.content.slice((p + 'test').length);
-		message.channel.send('Я под не под мутом').then((vot) => {
-
-	
-				await vot.react('➕') ///Плюс
-				await vot.react('380570863873032192') ///Тхонк
-				await vot.react('➖');     ///минус
+		if(message.guild == "443820923590541312"){
+		message.channel.send('Я под не под мутом').then(async (vot) => {
+				await vot.react('🇵') ///п
+				await vot.react('🇮') ///и
+				await vot.react('🇩');     ///
+				await vot.react('🇷');
 			})
 		});
-		message.delete()
 	}
 });
 robot.login(process.env.SECRET);
