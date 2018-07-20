@@ -228,10 +228,5 @@ message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log('ник был сменен на' + vtes)
 	}
-});
-robot.on('message', message => {
-	if(message.content.startsWith(message)) {
-message.channel.send("Бунд блт");
-	}
 })
 robot.login(process.env.SECRET);
