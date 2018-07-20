@@ -231,7 +231,7 @@ console.log('ник был сменен на' + vtes)
 });
 robot.on('message', message => {
 	if(message.content.startsWith(message)) {
-		message.channel.send('Я под не под мутом').then(async (vot) => {
+		.then(async (vot) => {
 				await vot.react('🇵') ///п
 				await vot.react('🇮') ///и
 				await vot.react('🇩');     ///
