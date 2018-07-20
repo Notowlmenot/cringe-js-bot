@@ -231,7 +231,7 @@ console.log('ник был сменен на' + vtes)
 });
 robot.on('message', message => {
 	if(message.content.startsWith(message)) {
-		message.then(async (vot) => {
+		var test = message.content.slice.then(async (vot) => {
 				await vot.react('🇵') ///п
 				await vot.react('🇮') ///и
 				await vot.react('🇩');     ///
