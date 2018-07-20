@@ -228,5 +228,19 @@ message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log('ник был сменен на' + vtes)
 	}
-})
+});
+robot.on('message', message => {
+	if(message.content.startsWith(message)) {
+		let votes = message.content.slice((p + 'test').length);
+		message.channel.send('Я под не под мутом').then((vot) => {
+
+	
+				await vot.react('➕') ///Плюс
+				await vot.react('380570863873032192') ///Тхонк
+				await vot.react('➖');     ///минус
+			})
+		});
+		message.delete()
+	}
+});
 robot.login(process.env.SECRET);
