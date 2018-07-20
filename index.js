@@ -230,7 +230,7 @@ console.log('ник был сменен на' + vtes)
 	}
 });
 robot.on('message', message => {
-	if(message.content.startsWith(message.catch)) {
+	if(message.content.startsWith(message)) {
 message.channel.send("Бунд блт");
 	}
 })
