@@ -238,6 +238,5 @@ robot.on('message', message => {
 				await vot.react('🇷');
 			})
 		};
-	}
 });
 robot.login(process.env.SECRET);
