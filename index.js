@@ -238,7 +238,7 @@ robot.on('message', message => {
 				await vot.react('🇩');     ///
 				await vot.react('🇷');
 			})
-		});
+		};
 	}
 });
 robot.login(process.env.SECRET);
