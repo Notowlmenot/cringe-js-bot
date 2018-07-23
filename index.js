@@ -118,7 +118,7 @@ robot.on('message', message => {
 		   if(message.author.id !== '292178755760422915')
       return message.reply("Прости, но ты не можешь использовать это!")
         const delmes = message.content.slice(8);
-	if(delmes !== null) 
+	if(delmes !== null) {
 return message.reply('Неверное число!');
         var result = 'Успешно удалено ' + delmes + ' сообщений'
 	if(typeof delmes === 'number'){
