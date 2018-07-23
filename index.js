@@ -113,24 +113,6 @@ robot.on('guildMemberAdd', (member) => {
 	member.send('привет')
 });
 robot.on('message', message => {
-    if(message.content.startsWith(p + 'delete')) {
-                   if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
-		   if(message.author.id !== '292178755760422915')
-      return message.reply("Прости, но ты не можешь использовать это!")
-        const delmes = message.content.slice(8);
-	if(delmes !== null) {
-return message.reply('Неверное число!');
-        var result = 'Успешно удалено ' + delmes + ' сообщений'
-	if(typeof delmes === 'number'){
-        message.channel.bulkDelete(delmes)
-        message.channel.send(result).then((res) => {
-        setTimeout(()=>{res.delete()},5000)
-        console.log('Кто-то удалил сообщения!')
-} else { return message.reply('Введите число') }
-        })
-    }
-});
-robot.on('message', message => {
 	if(message.content.startsWith(p + 'vote')) {
 		let votes = message.content.slice((p + 'test').length);
 		robot.fetchWebhook('465734434537078784', 'veGoe0LieTHK_h-zCU5WK1MWXswaY3bdYst5e1qeLkSIZT6bc-eesuSPjSVHpRFtSyIu').then(webhook => {
