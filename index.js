@@ -118,11 +118,10 @@ robot.on('message', message => {
 		   if(message.author.id !== '292178755760422915')
       return message.reply("Прости, но ты не можешь использовать это!")
         message.delete()
-        let delmes = message.content.slice((p + 'delete').length);
+        const delmes = message.content.slice(9);
         var result = 'Успешно удалено' + delmes + ' сообщений'
-	if(delmes !== undefined)
 	if(delmes !== null)
-return message.reply('Это не число')
+return message.reply('Введите число')
         message.channel.bulkDelete(delmes)
         message.channel.send(result).then((res) => {
         setTimeout(()=>{res.delete()},5000)
