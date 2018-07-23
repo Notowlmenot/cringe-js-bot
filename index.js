@@ -120,7 +120,7 @@ robot.on('message', message => {
         message.delete()
         const delmes = message.content.slice(9);
         var result = 'Успешно удалено' + delmes + ' сообщений'
-	if(delmes !== null)
+	if(!Number.isInteger(delmes))
 return message.reply('Введите число')
         message.channel.bulkDelete(delmes)
         message.channel.send(result).then((res) => {
