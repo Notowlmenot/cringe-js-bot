@@ -228,15 +228,5 @@ message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log('ник был сменен на' + vtes)
 	}
-});
-robot.on('message', message => {
-	if(message.content.startsWith(message)) {
-		var test = message.content.slice('').then(async (vot) => {
-				await vot.react('🇵') ///п
-				await vot.react('🇮') ///и
-				await vot.react('🇩');     ///
-				await vot.react('🇷');
-			})
-		};
-});
+})
 robot.login(process.env.SECRET);
