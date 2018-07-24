@@ -110,6 +110,7 @@ message.channel.send('Pinging...').then(sent => {
 });
 robot.on('guildMemberAdd', (member) => {
     console.log(`${member.displayName} вступил в ${member.guild.name}.`)
+if(member.guild.id === "371447189815296001"){
 robot.channels.get('371448746304864256').send(`Поприведствуем нового члена семьи Просто Сервера! - ${member.guild.name}, он уже ${member.guild.size}`);
 });
 robot.on('message', message => {
@@ -227,8 +228,8 @@ robot.on("messageDelete", (msg) => {
   };
 });
 robot.on("guildMemberRemove", member => {
-if(member.guild.id === "371447189815296001"){
     console.log(`${member.displayName} покинул ${member.guild.name}.`)
+if(member.guild.id === "371447189815296001"){
 robot.channels.get('371448746304864256').send(`${member.guild.name} покинул нас, скажем ему пока-пока!`);
 	}
 })
