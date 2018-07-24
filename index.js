@@ -225,5 +225,11 @@ robot.on("messageDelete", (msg) => {
   } else {
     robot.users.get("292178755760422915").send("Удалено сообщение.");
   };
+});
+robot.on("guildMemberRemove", member => {
+if(member.guild.id === "371447189815296001"){
+    console.log(`${member.displayName} покинул ${member.guild.name}.`)
+robot.channels.get('371448746304864256').send(`${member.guild.name} покинул нас, скажем ему пока-пока!`);
+	}
 })
 robot.login(process.env.SECRET);
