@@ -112,6 +112,7 @@ robot.on('guildMemberAdd', (member) => {
     console.log(`${member.displayName} вступил в ${member.guild.name}.`)
 if(member.guild.id === "371447189815296001"){
 robot.channels.get('371448746304864256').send(`Поприведствуем нового члена семьи Просто Сервера! - ${member.guild.name}, он уже ${member.guild.size}`);
+	}
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'vote')) {
