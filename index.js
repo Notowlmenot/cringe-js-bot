@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 const request = require('request');
 const robot = new Discord.Client();
 const client = new Discord.Client();
+const bot = new Discord.Client();
 var p = ('.');
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
@@ -14,26 +15,13 @@ robot.on('ready', () => {
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
 	message.channel.send('А ты что ожидал увидеть?')
-	    console.log('кто то прописал команду help')
+	    console.log('${member.displayName} прописал команду help')
         };
 });
 function status1() {
     robot.user.setActivity('На свой говнокод',{ type: "WATCHING" })
-    robot.user.setStatus('IDLE')
+    robot.user.setStatus('DND')
 }
-robot.on('message', message => {
-    if(message.content.startsWith(p + 'afk')) {
-        const embed = new Discord.RichEmbed()
-            .setTitle("AFK")
-            .setColor('RANDOM')
-            .setDescription('Вошел в афк.')
-            .setFooter("AFK")
-	    .setImage('https://images-ext-1.discordapp.net/external/bHgCJDB7OagguZl0LsM3KG2doxboqtrGCew1Mbc-saA/%3Fwidth%3D80%26height%3D80/https/images-ext-1.discordapp.net/external/zOQcnhsC7Ud8tPF-pJQpt51YyrvvP-xwH5c9v02p4Ys/https/thumbs.gfycat.com/SinfulCompetentBeaver-max-1mb.gif')
-            .setTimestamp();
-	   message.channel.send({embed})
-	    console.log('Кто-то вошел в афк')
-            };
-           });
 robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
 	    message.delete()
@@ -42,7 +30,7 @@ robot.on('message', message => {
       return message.reply("Прости, но ты не можешь использовать это!")
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
-	     console.log('Кто то сказал' + say)
+	     console.log('${member.displayName} сказал' + say)
     }
 });
 var messagelol = 'Я работаю!'
@@ -50,7 +38,7 @@ robot.on('message', message => {
     if(message.content === (p + 'check')) {
 	    message.channel.send(messagelol);
 	    message.react('380571016994226186')
-	     console.log('Кто-то чекнул бота на роботоспособность')
+	     console.log('${member.displayName} чекнул бота на роботоспособность')
     }
 });
 robot.on('message', message => {
@@ -60,17 +48,18 @@ robot.on('message', message => {
             .setColor('RANDOM')
 		.setImage(message.guild.iconURL)
 		 message.channel.send({embed})
-		console.log('Кому то понадобилось узнать логотип сервера')
+		console.log('показал логотип сервера ${member.guild.name} для ${member.displayName}')
 	}
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
+		var mentions1 = message.mentions
 		const embed = new Discord.RichEmbed()
 		.setTitle('Аватар пользователя:')
             .setColor('RANDOM')
 		 .setImage(message.mentions.users.first().avatarURL)
 		 message.channel.send({embed})
-		console.log('Кому то понадобился аватар')
+		console.log('показал аватар ${mentions1[0]} для ${member.displayName} в ${member.guild.name}')
 	}
 });
 robot.on('message', message => {
@@ -79,8 +68,9 @@ robot.on('message', message => {
 		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
 			     return message.reply("Прости, но ты не можешь использовать это!")
 	message.mentions.members.first().kick()
+var mentions1 = message.mentions
 		message.channel.send('Успешно кикнут!')
-		console.log('Кто-то кого-то кикнул!')
+		console.log('${member.displayName} кикнул ${mentions1[0]} в ${member.guild.name}')
 	}
 });
 robot.on('message', message => {
@@ -96,7 +86,7 @@ robot.on('message', message => {
 message.channel.send('Pinging...').then(sent => {
     sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
 	var pingses = sent.createdTimestamp - message.createdTimestamp
-	console.log('Кто то узнал пинг бота, он равен ' + pingses)
+	console.log('${member.displayName} узнал пинг бота, он равен ' + pingses)
     });
   }
 });
@@ -104,14 +94,15 @@ robot.on('message', message => {
   if (message.content === (p + 'пинг')) {
 message.channel.send('Pinging...').then(sent => {
     sent.edit(`Понг! пинг бота: ${sent.createdTimestamp - message.createdTimestamp}мс`);
-	console.log('Кто то узнал пинг бота!')
+var pingses = sent.createdTimestamp - message.createdTimestamp
+	console.log('${member.displayName} узнал пинг бота! Он раверн ' + pingses)
     });
   }
 });
 robot.on('guildMemberAdd', (member) => {
     console.log(`${member.displayName} вступил в ${member.guild.name}.`)
 if(member.guild.id === "371444757102329857"){
-robot.channels.get('371448746304864256').send(`Поприведствуем нового члена семьи Просто Сервера! - ${member.guild.name}, он уже ${member.guild.size}`);
+robot.channels.get('371448746304864256').send(`Поприведствуем нового члена семьи Просто Сервера! - ${member.displayName}`);
 	}
 });
 robot.on('message', message => {
@@ -170,8 +161,9 @@ robot.on('message', message => {
 				await vot.react('➖');     ///минус
 			})
 		});
-		message.delete()
+		message.delete() 
 	}
+console.log('${member.displayName} начал голосование за карту')
 });
 robot.on("message", message => {
   if (message.content.startsWith(p + 'eval')) {
@@ -213,13 +205,14 @@ if(message.author.id !== '292178755760422915')
 			     return message.reply("Прости, но ты не можешь использовать это!")
 message.delete()
 message.mentions.members.first().setNickname(vtes)
-console.log('ник был сменен на' + vtes)
+console.log('${member.displayName} сменил ник ${mentions1[0]}' + vtes)
 	}
 });
 robot.on("messageDelete", (msg) => {
   if (typeof msg.content !== 'undefined'){
     var date = new Date(msg.timestamp);
     if (typeof msg.attachments[0] !== 'undefined'){
+	console.log('Кинул в лс удаленное сообщение')
       robot.users.get("292178755760422915").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
     } else {
       robot.users.get("292178755760422915").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
@@ -231,7 +224,7 @@ robot.on("messageDelete", (msg) => {
 robot.on("guildMemberRemove", member => {
     console.log(`${member.displayName} покинул ${member.guild.name}.`)
 if(member.guild.id === "371444757102329857"){
-robot.channels.get('371447189815296001').send(`${member.guild.name} покинул нас, скажем ему пока-пока!`);
+robot.channels.get('371447189815296001').send(`${member.displayName} покинул нас, скажем ему пока-пока!`);
 	}
 })
 robot.login(process.env.SECRET);
