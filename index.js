@@ -109,8 +109,8 @@ message.channel.send('Pinging...').then(sent => {
   }
 });
 robot.on('guildMemberAdd', (member) => {
-	member.addRole('467526203713126410')
-	member.send('привет')
+    console.log(`${member.displayName} вступил в ${member.guild.name}.`)
+robot.channels.get('371448746304864256').send(`Поприведствуем нового члена семьи Просто Сервера! - ${member.guild.name}, он уже ${member.guild.size}`);
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'vote')) {
