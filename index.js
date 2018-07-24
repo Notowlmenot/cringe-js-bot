@@ -218,12 +218,12 @@ robot.on("messageDelete", (msg) => {
   if (typeof msg.content !== 'undefined'){
     var date = new Date(msg.timestamp);
     if (typeof msg.attachments[0] !== 'undefined'){
-      robot.createMessage("471112209842569226", `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
+      robot.channels.send("471112209842569226").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
     } else {
-      robot.createMessage("471112209842569226", `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
+      robot.channels.get("471112209842569226").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
     };
   } else {
-    robot.createMessage("471112209842569226", "Удалено сообщение.");
+    robot.channels.get("471112209842569226").send("Удалено сообщение.");
   };
 })
 robot.login(process.env.SECRET);
