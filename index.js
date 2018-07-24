@@ -213,5 +213,17 @@ message.delete()
 message.mentions.members.first().setNickname(vtes)
 console.log('ник был сменен на' + vtes)
 	}
+});
+bot.on("messageDelete", (msg) => {
+  if (typeof msg.content !== 'undefined'){
+    var date = new Date(msg.timestamp);
+    if (typeof msg.attachments[0] !== 'undefined'){
+      bot.createMessage("471112209842569226", `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
+    } else {
+      bot.createMessage("471112209842569226", `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
+    };
+  } else {
+    bot.createMessage("471112209842569226", "Удалено сообщение.");
+  };
 })
 robot.login(process.env.SECRET);
