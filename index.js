@@ -231,7 +231,7 @@ robot.on("messageDelete", (msg) => {
 robot.on("guildMemberRemove", member => {
     console.log(`${member.displayName} покинул ${member.guild.name}.`)
 if(member.guild.id === "371444757102329857"){
-robot.channels.get('371448746304864256').send(`${member.guild.name} покинул нас, скажем ему пока-пока!`);
+robot.channels.get('371447189815296001').send(`${member.guild.name} покинул нас, скажем ему пока-пока!`);
 	}
 })
 robot.login(process.env.SECRET);
