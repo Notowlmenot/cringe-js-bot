@@ -214,7 +214,7 @@ message.mentions.members.first().setNickname(vtes)
 console.log('ник был сменен на' + vtes)
 	}
 });
-bot.on("messageDelete", (msg) => {
+robot.on("messageDelete", (msg) => {
   if (typeof msg.content !== 'undefined'){
     var date = new Date(msg.timestamp);
     if (typeof msg.attachments[0] !== 'undefined'){
