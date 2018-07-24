@@ -35,7 +35,7 @@ robot.on('message', message => {
 });
 robot.on('message', message => {
     if(message.content === (p + 'check')) {
-	var messagelol = 'Я работаю, а ты что думал?
+	var messagelol = 'Я работаю, а ты что думал?'
 	    message.channel.send(messagelol);
 	    message.react('380571016994226186')
 	     console.log(`${message.author.displayName} чекнул бота на роботоспособность`)
