@@ -173,7 +173,7 @@ if(member.guild.id === "371444757102329857"){
 robot.channels.get('371447189815296001').send(`${member.displayName} покинул нас, скажем ему пока-пока!`);
 	}
 });
-robot.on('message', msg => {
+robot.on('message', (msg, args) => {
 	if(msg.content.startsWith(p + 'testvote')) {
 	const embed = new Discord.RichEmbed()
     .setTitle("Голосование")
