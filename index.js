@@ -173,20 +173,13 @@ if(member.guild.id === "371444757102329857"){
 robot.channels.get('371447189815296001').send(`${member.displayName} покинул нас, скажем ему пока-пока!`);
 	}
 });
-robot.on('message', (msg, args) => {
+robot.on('message', msg => {
 	if(msg.content.startsWith(p + 'testvote')) {
-	var textvote = msg.content.slice(7);
-	const embed = new Discord.RichEmbed()
-    .setTitle("Голосование")
-    .setDescription(textvote)
-    .setColor('RANDOM')
-    .setFooter('AMS');
-	msg.guild.channels.get('371446181416665088').send({embed}).then(async (sent) => {
-  await sent.react('✅')
-  await sent.react('❌')
-  await sent.react('✅')
-  return msg.reply('**Голосование успешно начато**')
-		})
+	var embed = new client.RichEmbed()
+  .setTitle("Информация")
+  .setAuthor(name: ${msg.author}, icon: ${msg.author.iconURL})
+  .setFooter("AMS")
+  msg.channel.send({embed})
 	}
 })
 robot.login(process.env.SECRET);
