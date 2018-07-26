@@ -175,9 +175,10 @@ robot.channels.get('371447189815296001').send(`${member.displayName} покин�
 });
 robot.on('message', (msg, args) => {
 	if(msg.content.startsWith(p + 'testvote')) {
+	var textvote = msg.content.slice(7);
 	const embed = new Discord.RichEmbed()
     .setTitle("Голосование")
-    .setDescription(args.join(" "))
+    .setDescription(textvote)
     .setColor('RANDOM')
     .setFooter('AMS');
 	msg.guild.channels.get('371446181416665088').send({embed}).then(async (sent) => {
