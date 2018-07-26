@@ -175,11 +175,7 @@ robot.channels.get('371447189815296001').send(`${member.displayName} покин�
 });
 robot.on('message', msg => {
 	if(msg.content.startsWith(p + 'testvote')) {
-	var embed = new client.RichEmbed()
-  .setTitle("Информация")
-  .setAuthor(name: ${msg.author}, icon: ${msg.author.iconURL})
-  .setFooter("AMS")
-  msg.channel.send({embed})
+	msg.channel.send('123');
 	}
 })
 robot.login(process.env.SECRET);
