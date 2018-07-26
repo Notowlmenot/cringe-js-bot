@@ -180,7 +180,7 @@ robot.on('message', msg => {
     .setDescription(args.join(" "))
     .setColor('RANDOM')
     .setFooter('AMS');
-	msg.guild.channels.get('371446181416665088').send({embed}).then(sent => {
+	msg.guild.channels.get('371446181416665088').send({embed}).then(async (sent) => {
   await sent.react('✅')
   await sent.react('❌')
   await sent.react('✅')
