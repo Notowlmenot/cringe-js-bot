@@ -185,7 +185,8 @@ robot.on('message', msg => {
   await sent.react('❌')
   await sent.react('✅')
   return msg.reply('**Голосование успешно начато**')
+			}
+		}
 	}
-}
 })
 robot.login(process.env.SECRET);
