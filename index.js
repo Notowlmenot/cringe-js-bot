@@ -82,19 +82,21 @@ message.channel.send('Pinging...').then(sent => {
     });
   }
 });
+//Тут тоже был Платинум )
 robot.on('message', message => {
   if (message.content === (p + 'пинг')) {
 message.channel.send('Pinging...').then(sent => {
     sent.edit(`Понг! пинг бота: ${sent.createdTimestamp - message.createdTimestamp}мс`);
 var pingses = sent.createdTimestamp - message.createdTimestamp
-	console.log(`${message.author.displayName} узнал пинг бота! Он раверн ` + pingses)
+	console.log(`${message.author.displayName} узнал пинг бота! Он равен ` + pingses)
     });
   }
 });
+//Здеся был Платинум )
 robot.on('guildMemberAdd', (member) => {
     console.log(`${member.displayName} вступил в ${member.guild.name}.`)
 if(member.guild.id === "371444757102329857"){
-robot.channels.get('371448746304864256').send(`Поприведствуем нового члена семьи Просто Сервера! - ${member.displayName}`);
+robot.channels.get('371448746304864256').send(`Поприветствуем нового члена семьи Просто Сервера! - ${member.displayName}`);
 	}
 });
 robot.on('message', message => {
