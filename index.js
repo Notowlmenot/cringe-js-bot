@@ -53,6 +53,8 @@ robot.on('message', message => {
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
+		if(message.author.id !== '292178755760422915')
+			     return message.reply("Прости, но ты не можешь использовать это!")
 		var mentions1 = message.mentions
 		const embed = new Discord.RichEmbed()
 		.setTitle('Аватар пользователя:')
