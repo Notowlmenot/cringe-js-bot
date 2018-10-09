@@ -54,24 +54,17 @@ robot.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
 		if(message.author.id !== '292178755760422915')
 			     return message.reply("Прости, но ты не можешь использовать это!")
-		var mentions1 = message.mentions
+try {
+var mentions1 = message.mentions
 		const embed = new Discord.RichEmbed()
 		.setTitle('Аватар пользователя:')
             .setColor('RANDOM')
 		 .setImage(message.mentions.users.first().avatarURL)
 		 message.channel.send({embed})
 		console.log(`показал аватар ${mentions1[0]} для ${message.author.displayName} в ${message.guild.name}`)
-	}
-});
-robot.on('message', message => {
-	if(message.content.startsWith(p + 'kick')) {
-		if(message.author.id !== '292178755760422915')
-		if(!message.member.roles.some(r=>["Админы"].includes(r.name)) )
-			     return message.reply("Прости, но ты не можешь использовать это!")
-	message.mentions.members.first().kick()
-var mentions1 = message.mentions
-		message.channel.send('Успешно кикнут!')
-		console.log(`${message.author.displayName} кикнул ${mentions1[0]} в ${message.author.displayName}`)
+} catch (err) {
+message.channel.send('Ты уверен что это человек имеет аватарку?')
+		}
 	}
 });
 robot.on('message', message => {
@@ -80,15 +73,6 @@ message.channel.send('Pinging...').then(sent => {
     sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
 	var pingses = sent.createdTimestamp - message.createdTimestamp
 	console.log(`${message.author.displayName} узнал пинг бота, он равен ` + pingses)
-    });
-  }
-});
-robot.on('message', message => {
-  if (message.content === (p + 'пинг')) {
-message.channel.send('Pinging...').then(sent => {
-    sent.edit(`Понг! пинг бота: ${sent.createdTimestamp - message.createdTimestamp}мс`);
-var pingses = sent.createdTimestamp - message.createdTimestamp
-	console.log(`${message.author.displayName} узнал пинг бота! Он раверн ` + pingses)
     });
   }
 });
@@ -144,17 +128,6 @@ const code = message.content.split(" ").slice(1).join(" ");
        }
   }
   })
-robot.on('message', message => {
-	if(message.content.startsWith(p + 'ник')) {
-var mentions1 = message.mentions
-const vtes = message.content.slice(28);
-if(message.author.id !== '292178755760422915')
-			     return message.reply("Прости, но ты не можешь использовать это!")
-message.delete()
-message.mentions.members.first().setNickname(vtes)
-console.log(`${message.author.displayName} сменил ник ${mentions1[0]}` + vtes)
-	}
-});
 robot.on("messageDelete", (msg) => {
   if (typeof msg.content !== 'undefined'){
     var date = new Date(msg.timestamp);
