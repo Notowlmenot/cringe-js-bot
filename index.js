@@ -56,7 +56,6 @@ message.channel.send('Произошла ошибка, возможно, вы п
 });
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
-		if(message.author.id !== '292178755760422915')
 			     return message.reply("Прости, но ты не можешь использовать это!")
 try {
 var mentions1 = message.mentions
