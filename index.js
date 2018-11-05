@@ -71,9 +71,10 @@ message.channel.send('Ты уверен что это человек имеет 
 });
 robot.on('message', message => {
   if (message.content === (p + 'ping')) {
-message.channel.send('Pinging...').then(sent => {
-    sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
 	var pingses = sent.createdTimestamp - message.createdTimestamp
+	const embed = new Discord.RichEmbed()
+	.setTitle('Пинг **бота**:')
+		.setDescription(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`)
 	console.log(`${message.author.displayName} узнал пинг бота, он равен ` + pingses)
     });
   }
