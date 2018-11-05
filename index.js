@@ -77,7 +77,7 @@ robot.on('message', message => {
 		.setDescription(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`)
 	console.log(`${message.author.displayName} узнал пинг бота, он равен ` + pingses)
     });
-});
+};
 robot.on('guildMemberAdd', (member) => {
     console.log(`${member.displayName} вступил в ${member.guild.name}.`)
 if(member.guild.id === "371444757102329857"){
