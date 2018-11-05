@@ -132,7 +132,7 @@ const code = message.content.split(" ").slice(1).join(" ");
   })
 robot.on("messageDelete", (msg) => {
   if (typeof msg.content !== 'undefined'){
-    var date = new Date(msg.timestamp);
+    var date = new Date(msg.createdTimestamp);
     if (typeof msg.attachments[0] !== 'undefined'){
 	console.log('Кинул в лс удаленное сообщение')
       robot.users.get("292178755760422915").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
