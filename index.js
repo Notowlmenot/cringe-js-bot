@@ -152,13 +152,14 @@ robot.channels.get('371447189815296001').send(`${member.displayName} покин�
 robot.on('message', msg => {
     if (msg.content === (p + 'монетка')) {
         var coin = Math.floor(Math.random() * 2) + 1  
-
+	msg.delete()
     if(coin == 1){
-        msg.channel.send('Решка!')
+        msg.reply('Тебе выпала ***Решка!*** :469056967755825163:')
     }
     if(coin == 2){
-        msg.channel.send('Орел!')
+        msg.reply('Тебе выпал ***Орел!*** 🦅')
 	    }
+	
     }
 })
 robot.login(process.env.SECRET);
