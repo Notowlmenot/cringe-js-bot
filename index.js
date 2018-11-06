@@ -148,16 +148,5 @@ robot.on("guildMemberRemove", member => {
 if(member.guild.id === "371444757102329857"){
 robot.channels.get('371447189815296001').send(`${member.displayName} покинул нас, скажем ему пока-пока!`);
 	}
-});
-robot.on('message', msg => {
-	if (msg.content === (p + 'монетка')) {
-		var coin = Math.floor(Math.random() * 3)
-	if(coin == 1){
-		msg.channel.send('Решка!')
-	if(coin == 2){
-		msg.channel.send('Орел!')
-			}
-		}
-	}
 })
 robot.login(process.env.SECRET);
