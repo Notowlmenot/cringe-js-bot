@@ -19,7 +19,7 @@ robot.on('message', message => {
         };
 });
 function status1() {
-    robot.user.setActivity('На свой говнокод',{ type: "WATCHING" })
+    robot.user.setActivity(robot.guild.size,{ type: "WATCHING" })
     robot.user.setStatus('DND')
 }
 robot.on('message', message => {
