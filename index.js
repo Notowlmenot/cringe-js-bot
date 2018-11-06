@@ -19,7 +19,7 @@ robot.on('message', message => {
         };
 });
 function status1() {
-    let servers = robot.guild.size
+    let servers = robot.guilds.size
     robot.user.setActivity(servers,{ type: "WATCHING" })
     robot.user.setStatus('DND')
 }
