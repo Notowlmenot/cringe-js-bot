@@ -155,9 +155,9 @@ robot.on('message', msg => {
 
     if(coin == 0){
         msg.channel.send('Решка!')
+    }
     if(coin == 1){
         msg.channel.send('Орел!')
-            }
         }
     }
 })
