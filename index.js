@@ -20,7 +20,7 @@ robot.on('message', message => {
 });
 function status1() {
     let servers = robot.guilds.size
-    robot.user.setActivity('На ' + servers + ' серверах' ,{ type: "PLAYING" })
+    robot.user.setActivity('на ' + servers + ' серверах' ,{ type: "PLAYING" })
     robot.user.setStatus('DND')
 }
 robot.on('message', message => {
