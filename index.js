@@ -160,6 +160,7 @@ robot.on('message', msg => {
 			}
 		} else {
 			msg.channel.send('Что-то пошло не так!');
+		}
 	}
 })
 robot.login(process.env.SECRET);
