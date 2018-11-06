@@ -157,9 +157,9 @@ robot.on('message', msg => {
 	
 	if(coin == 0){
 		msg.channel.send('Орел!')
-			}
 		} else {
 			msg.channel.send('Что-то пошло не так!');
+			}
 		}
 	}
 })
