@@ -154,12 +154,10 @@ robot.on('message', msg => {
 		var coin = Math.random();
 	if(coin == 1){
 		msg.channel.send('Решка!')
-	
 	if(coin == 0){
 		msg.channel.send('Орел!')
 		} else {
 			msg.channel.send('Что-то пошло не так!');
-			}
 		}
 	}
 })
