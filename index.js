@@ -151,7 +151,7 @@ robot.channels.get('371447189815296001').send(`${member.displayName} покин�
 });
 robot.on('message', msg => {
 	if (msg.content === (p + 'монетка')) {
-		var coin = Math.floor(Math.random() * 2)
+		var coin = Math.floor(Math.random() * 3)
 	if(coin == 1){
 		msg.channel.send('Решка!')
 	if(coin == 2){
