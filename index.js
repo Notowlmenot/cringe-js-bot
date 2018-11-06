@@ -158,5 +158,6 @@ robot.on('message', msg => {
 	if(coin == 0){
 		msg.channel.send('Орел!')
 	}
+	}
 })
 robot.login(process.env.SECRET);
