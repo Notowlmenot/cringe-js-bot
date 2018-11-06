@@ -19,7 +19,8 @@ robot.on('message', message => {
         };
 });
 function status1() {
-    robot.user.setActivity(robot.guild.size,{ type: "WATCHING" })
+    let servers = robot.guild.size
+    robot.user.setActivity(servers,{ type: "WATCHING" })
     robot.user.setStatus('DND')
 }
 robot.on('message', message => {
@@ -30,14 +31,6 @@ robot.on('message', message => {
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
 	     console.log(`${message.author.displayName} сказал` + say)
-    }
-});
-robot.on('message', message => {
-    if(message.content === (p + 'check')) {
-	var messagelol = 'Я работаю, а ты что думал?'
-	    message.channel.send(messagelol);
-	    message.react('380571016994226186')
-	     console.log(`${message.author.displayName} чекнул бота на роботоспособность`)
     }
 });
 robot.on('message', message => {
