@@ -158,8 +158,7 @@ robot.on('message', msg => {
     }
     if(coin == 2){
         msg.channel.send('Орел!')
-    }
-	msg.channel.send(coin)
+	    }
     }
 })
 robot.login(process.env.SECRET);
