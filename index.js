@@ -94,7 +94,6 @@ robot.on('message', message => {
 robot.on("message", message => {
   if (message.content.startsWith(p + 'eval')) {
 	  if(message.author.id !== '292178755760422915' || message.author.id !== '142832324214521857')
-			     return message.reply("Прости, но ты не можешь использовать это!")
 const code = message.content.split(" ").slice(1).join(" ");
         try {
          let evaled = eval(code);
