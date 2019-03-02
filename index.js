@@ -2,13 +2,13 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const request = require('request');
 const client = new Discord.Client();
+const robot = new Discord.Client();
 const bot = new Discord.Client();
 //Начало зоны копирайта
 const translateClient = require('@google-cloud/translate')({
   projectId: 'project-id',
   keyFilename: '/path/to/keyfile.json'
 });
-const bot = new Discord.Client()
 
 let languagesObj = {}
 let languageCodes = ''
