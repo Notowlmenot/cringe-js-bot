@@ -1,7 +1,6 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const request = require('request');
-const robot = new Discord.Client();
 const client = new Discord.Client();
 const bot = new Discord.Client();
 //Начало зоны копирайта
