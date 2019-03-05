@@ -163,12 +163,12 @@ robot.on('message', msg => {
         var money = 0 + randmoney;
         msg.channel.send('Ты успешно поработал на ' + randmoney)
         if(money != 0){
-            var money = money + randmoney
+            var moremoney = money + randmoney
         }
     }
     
     if(msg.content === (p + 'bal')) {
-        msg.channel.send('Твой баланс: ' + money)
+        msg.channel.send('Твой баланс: ' + moremoney)
     }
 })
 robot.login(process.env.SECRET);
