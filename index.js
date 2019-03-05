@@ -165,8 +165,7 @@ function getRandomInRange(min, max) {
         msg.channel.send('Ты успешно поработал на ' + randmoney)
                 if(msg.content === (p + 'bal')) {
                     msg.channel.send('Твой баланс: скоро сделаю')
-                }
-            }
+          }
         }
     })
 robot.login(process.env.SECRET);
