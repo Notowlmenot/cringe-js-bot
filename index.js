@@ -160,11 +160,15 @@ function getRandomInRange(min, max) { return Math.floor(Math.random() * (max - m
 robot.on('message', msg => {
     if(msg.content === (p + 'work')) {
         var randmoney = getRandomInRange(100, 250)
+        var money = 0 + randmoney;
         msg.channel.send('Ты успешно поработал на ' + randmoney)
+        if(money != 0){
+            var money = money + randmoney
+        }
     }
     
     if(msg.content === (p + 'bal')) {
-        msg.channel.send('Твой баланс: скоро сделаю')
+        msg.channel.send('Твой баланс: ' + money)
     }
 })
 robot.login(process.env.SECRET);
