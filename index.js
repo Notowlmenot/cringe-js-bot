@@ -156,20 +156,21 @@ robot.on('message', msg => {
     }
 });
 function getRandomInRange(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-	
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 
-          var randmoney = getRandomInRange(100, 250)
+
+  var randmoney = getRandomInRange(100, 250)
 
 robot.on('message', msg => {
-    if(msg.content === (p + 'work')) {
-        msg.channel.send('Ты успешно поработал на ' + randmoney)
-    }
+if(msg.content === (p + 'work')) {
+msg.channel.send('Ты успешно поработал на ' + randmoney)
+}
 });
 robot.on('message', msg => {
     if(msg.content === (p + 'bal')) {
-	msg.channel.send('Твой баланс: ' + randmoney)
-    	}
-    }
-})
+        msg.channel.send('Твой баланс: скоро сделаю')
+
+        }
+    })
+}
 robot.login(process.env.SECRET);
