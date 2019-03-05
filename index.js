@@ -159,15 +159,14 @@ function getRandomInRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-robot.on('message', msg => {
-var randmoney = getRandomInRange(100, 250)
-	if(msg.content === (p + 'work')) {
-	msg.channel.send('Ты успешно поработал на ' + randmoney)
-    		if(msg.content === (p + 'bal')) {
-       	 	msg.channel.send('Твой баланс: скоро сделаю')
-
-        	}
-    	})
-	}
-})
+  robot.on('message', msg => {
+    var randmoney = getRandomInRange(100, 250)
+        if(msg.content === (p + 'work')) {
+        msg.channel.send('Ты успешно поработал на ' + randmoney)
+                if(msg.content === (p + 'bal')) {
+                    msg.channel.send('Твой баланс: скоро сделаю')
+                }
+            }
+        }
+    })
 robot.login(process.env.SECRET);
