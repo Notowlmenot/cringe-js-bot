@@ -4,15 +4,6 @@ const request = require('request');
 const client = new Discord.Client();
 const robot = new Discord.Client();
 const bot = new Discord.Client();
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize('database', 'user', 'password', {
-	host: 'localhost',
-	dialect: 'sqlite',
-	logging: false,
-	operatorsAliases: false,
-	// SQLite only
-	storage: 'database.sqlite',
-});
 var p = ('.');
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
