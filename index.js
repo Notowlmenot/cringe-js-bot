@@ -12,6 +12,7 @@ const sequelize = new Sequelize('database', 'user', 'password', {
 	// SQLite only
 	storage: 'database.sqlite',
 });
+const Sequelize = require('sequelize');
 var p = ('.');
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
