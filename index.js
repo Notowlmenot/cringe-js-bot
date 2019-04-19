@@ -123,7 +123,7 @@ const code = message.content.split(" ").slice(1).join(" ");
        }} else { return message.reply("Прости, но ты не можешь использовать это!") }
   }
   })
-robot.on("messageDelete", (msg) => {
+robot.on("messageDeleteBulk", (msg) => {
   if (typeof msg.content !== 'undefined'){
     var date = new Date(msg.createdTimestamp);
     if (typeof msg.attachments[0] !== 'undefined'){
@@ -155,20 +155,31 @@ robot.on('message', msg => {
 	
     }
 });
-function getRandomInRange(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
 
-robot.on('message', msg => {
-    if(msg.content === (p + 'work')) {
-        var randmoney = getRandomInRange(100, 250)
-        var money = 0 + randmoney;
-        msg.channel.send('Ты успешно поработал на ' + randmoney)
-        if(money != 0){
-            var moremoney = money + randmoney
+    function getRandomInRange(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+
+    robot.on('message', msg => {
+        if(msg.content === (p + 'work')) {
+            var randmoney = getRandomInRange(100, 250)
+            var money = 0 + randmoney;
+            msg.channel.send('Ты успешно поработал на ' + randmoney)
+            if(money != 0){
+                var moremoney = money + randmoney
+            }
         }
-    }
     
     if(msg.content === (p + 'bal')) {
         msg.channel.send('Твой баланс: ' + moremoney)
     }
-})
+});
+    robot.on('message', msg => {
+      var number = 0
+      if(msg.content === (p + 'mafia start')){
+        number++
+        msg.channel.send('Вы были добавленны в очередь. ваш номер: ' + number)
+      }
+      if(msg.content === (p + 'mafia')) {
+        msg.channel.send('В разработке')
+      }
+    })
 robot.login(process.env.SECRET);
