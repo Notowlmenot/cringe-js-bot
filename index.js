@@ -165,4 +165,4 @@ robot.on('message', msg => {
         msg.channel.send('В разработке')
       }
     })
-robot.login(process.env.SECRET);
+robot.login(process.env.SECRET)
