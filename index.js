@@ -165,12 +165,4 @@ robot.on('message', msg => {
         msg.channel.send('В разработке')
       }
     })
-	robot.on('message', msg => {
-	if(msg.content = (msg)) {
-	robot.fetchWebhook('618376118545809409', 'yPB0OtjwpbvbQ3Kl4cFlsWfPg_GKy2glAwBMWBRImJLoAV4wm33_fww99r2FOON8fChd').then(webhook => {
-            webhook.send( 'дождался? Думал аниме? а хуй там.')  
-		console.log('done')
-	})
-	}
-	})
 robot.login(process.env.SECRET)
